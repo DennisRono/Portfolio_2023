@@ -1,0 +1,6 @@
+.BreadCrumb {
+  padding-bottom: 20px;
+}
+.BreadCrumb .br_crumb_text {
+  color: var(--text-color);
+}/*# sourceMappingURL=breadcrumb.css.map */

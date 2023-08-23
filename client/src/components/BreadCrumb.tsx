@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react'
+import '../styles/css/breadcrumb.css'
 import { useAppDispatch, useAppSelector } from '../state/hooks'
 import { useLocation } from 'react-router-dom'
 import { setPath } from '../state/actions/pathAction'
