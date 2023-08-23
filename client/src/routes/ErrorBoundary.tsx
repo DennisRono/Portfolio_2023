@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const ErrorBoundary = () => {
-  return <div>ErrorBoundary</div>
+  return (
+    <Fragment>
+      <div className="ErrorBoundary"></div>
+    </Fragment>
+  )
 }
 
 export default ErrorBoundary
