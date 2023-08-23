@@ -15,7 +15,10 @@ const BreadCrumb = () => {
   return (
     <Fragment>
       <div className="BreadCrumb">
-        <h4 className="br_crumb_text">~{path}</h4>
+        <h4 className="br_crumb_text">
+          ~{path}
+          <span className="typewriter_infinite">|</span>
+        </h4>
       </div>
     </Fragment>
   )

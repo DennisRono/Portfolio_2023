@@ -3,4 +3,23 @@
 }
 .BreadCrumb .br_crumb_text {
   color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+  font-size: 2rem;
+}
+.BreadCrumb .br_crumb_text .typewriter_infinite {
+  position: absolute;
+  top: 2px;
+  font-size: 1.7rem;
+  color: var(--text-color);
+  animation: cursor-blink 0.8s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=breadcrumb.css.map */

@@ -1,0 +1,91 @@
+.home {
+  .home_wrapper {
+    width: 100%;
+    .landing {
+      .home_landing_left {
+        width: 65%;
+        .landing_intro_large {
+          font-family: Apercu, 'Volte Rounded';
+          font-size: 4rem;
+          color: var(--text-color);
+          padding-bottom: 2rem;
+          span {
+            font-family: 'VolteRounded-Bold';
+            font-size: 4.2rem;
+          }
+        }
+        .l_intro_par {
+          color: var(--text-color);
+          font-size: 1.2rem;
+          padding-bottom: 20px;
+        }
+        .lnd_buymeacofee {
+          height: 50px;
+          width: 200px;
+          cursor: pointer;
+          fill: var(--text-color);
+        }
+      }
+      .home_landing_right {
+        width: 35%;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 2rem;
+        .l_cta_wrapper {
+          width: 80%;
+          border-radius: 10px;
+          margin-right: 20px;
+          position: relative;
+          margin: 20px 0;
+          .l_cta_bg_proj {
+            background: linear-gradient(to right, #db2777, #9333ea);
+            filter: blur(8px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+          }
+          .l_cta_projects {
+            gap: 10px;
+            padding: 18px 10px;
+            background-color: var(--background-modals);
+            border-radius: 10px;
+            justify-content: space-evenly;
+            &:hover {
+              ~ .l_cta_bg_proj {
+                filter: blur(1px);
+              }
+            }
+            .lcta_Ic {
+              height: 25px;
+              width: 25px;
+            }
+            .l_cta_par_one {
+              line-height: 13px;
+              font-size: 12px;
+            }
+            p,
+            span,
+            .l_cta_trigger {
+              color: var(--text-color);
+              fill: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+    .home_blog_highlights {
+      padding: 0 0 2rem 0;
+      .home_blog_high_top {
+        border-bottom: 1px solid #404040;
+        .home_blog_high_title {
+          font-family: 'VolteRounded-Bold';
+          color: var(--text-color);
+          font-size: 3.5rem;
+          padding: 1.5rem 0;
+        }
+      }
+    }
+  }
+}

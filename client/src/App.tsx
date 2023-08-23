@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Fragment>
       <div className="app" data-theme={theme}>
-        <div className="container_15">
+        <div className="container_12">
           <Routes />
         </div>
       </div>
