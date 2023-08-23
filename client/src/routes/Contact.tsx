@@ -2,15 +2,14 @@ import React, { Fragment } from 'react'
 import Header from '../components/Header'
 import BreadCrumb from '../components/BreadCrumb'
 
-const Home = () => {
+const Contact = () => {
   return (
     <Fragment>
-      <div className="home">
-        <Header />
-        <BreadCrumb />
-      </div>
+      <Header />
+      <BreadCrumb />
+      <div className="contact"></div>
     </Fragment>
   )
 }
 
-export default Home
+export default Contact
