@@ -1,0 +1,28 @@
+.container_5 {
+  margin: 0 5%;
+}
+.container_10 {
+  margin: 0 10%;
+}
+.flex {
+  display: flex;
+}
+.f_row {
+  flex-direction: row;
+}
+.f_column {
+  flex-direction: column;
+}
+.f_space_between {
+  justify-content: space-between;
+}
+.f_align_center {
+  align-items: center;
+}
+
+.p_v_10 {
+  padding: 10px 0;
+}
+.p_h_10 {
+  padding: 0 10px;
+}

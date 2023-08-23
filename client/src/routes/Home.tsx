@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
+import Header from '../components/Header'
 
 const Home = () => {
   return (
     <Fragment>
       <div className="home">
-        <h2>homepage</h2>
+        <Header />
       </div>
     </Fragment>
   )
