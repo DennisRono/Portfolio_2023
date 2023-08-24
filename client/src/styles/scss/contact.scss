@@ -260,16 +260,16 @@
       justify-content: center;
       gap: 10px;
       .cont_soc_item {
-        &:nth-child(2) {
-          margin-top: -3px;
+        &:nth-child(1) {
+          margin-bottom: -6px;
           .cont_soc_ic {
-            height: 25px;
-            width: 25px;
+            height: 30px;
+            width: 30px;
           }
         }
         .cont_soc_ic {
-          height: 30px;
-          width: 30px;
+          height: 25px;
+          width: 25px;
           fill: var(--text-color);
         }
       }

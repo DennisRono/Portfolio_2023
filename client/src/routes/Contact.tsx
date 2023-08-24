@@ -7,6 +7,8 @@ import Footer from '../components/Footer'
 import { ReactComponent as Upload } from '../assets/svg/icon-download.svg'
 import { ReactComponent as TwitterX } from '../assets/svg/twitter-x.svg'
 import { ReactComponent as Github } from '../assets/svg/github.svg'
+import { ReactComponent as Facebook } from '../assets/svg/facebook.svg'
+import { ReactComponent as LinkedIn } from '../assets/svg/linkedin.svg'
 import Envelop from '../assets/images/envelope_notif.png'
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
@@ -316,6 +318,12 @@ const Contact: React.FC = () => {
               </div>
               <div className="cont_soc_item c_p">
                 <Github className="cont_soc_ic" />
+              </div>
+              <div className="cont_soc_item c_p">
+                <Facebook className="cont_soc_ic" />
+              </div>
+              <div className="cont_soc_item c_p">
+                <LinkedIn className="cont_soc_ic" />
               </div>
             </div>
           </div>

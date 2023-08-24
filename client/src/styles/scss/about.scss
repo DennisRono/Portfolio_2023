@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200;300;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,500&display=swap');
+
+.about {
+  .abt_wrapper {
+    .abt_top {
+      .abt_left {
+        width: 30%;
+        .abt_me_title {
+          font-family: 'Space Mono';
+          color: var(--text-color);
+        }
+      }
+      .abt_right {
+        flex: 1;
+        padding-top: 3rem;
+        .abt_background {
+          .abt_b_title {
+            color: var(--text-color);
+            white-space: nowrap;
+            margin-bottom: 20px;
+            position: relative;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            text-align: right;
+            padding-right: 70px;
+            &::before {
+              background-color: var(--text-color);
+              content: '';
+              display: block;
+              height: 1px;
+              margin-left: 20px;
+              position: relative;
+              bottom: -20px;
+              width: 50%;
+              right: -100px;
+            }
+            .secCounter {
+              position: absolute;
+              bottom: 0;
+              right: 50px;
+              padding-bottom: 2px;
+              padding-right: 20px;
+              color: aqua;
+              font-size: 17px;
+            }
+          }
+          .abt_back_texts {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 200;
+            &::selection {
+              background: #221427;
+            }
+          }
+        }
+        .abt_tech_stack {
+          padding: 5rem 0;
+          .abt_stack_title {
+            color: var(--text-color);
+            white-space: nowrap;
+            display: flex;
+            position: relative;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            &::after {
+              background-color: var(--text-color);
+              content: '';
+              display: block;
+              height: 1px;
+              margin-bottom: -20px;
+              margin-left: 20px;
+              position: relative;
+              bottom: -20px;
+              width: 50%;
+            }
+            .sCounter {
+              position: absolute;
+              bottom: 0;
+              padding-bottom: 2px;
+              padding-right: 20px;
+              color: aqua;
+              font-size: 17px;
+            }
+          }
+          .abt_skillsTexts {
+            color: var(--text-color);
+            font-size: 1.4rem;
+            font-weight: 200;
+          }
+          .abt_stack_nav {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 40px;
+            ul {
+              margin-right: 50px;
+              margin-top: 30px;
+              h2 {
+                color: var(--text-color);
+                padding: 0;
+                margin-bottom: -10px;
+                margin-left: -10px;
+                font-size: 22px;
+              }
+              li {
+                position: relative;
+                padding-top: 20px;
+                display: block;
+                color: var(--text-color);
+                font-size: 18px;
+                font-weight: 200;
+              }
+              li:after {
+                content: '▹';
+                position: absolute;
+                left: 0px;
+                color: aqua;
+                font-size: 20px;
+                line-height: 12px;
+                margin-left: -20px;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .eTexts {
+      padding: 4rem 0;
+      .eTitle {
+        position: relative;
+        text-align: center;
+        color: var(--text-color);
+        letter-spacing: 1.5px;
+        font-weight: 400;
+        .eCounter {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: 2px;
+          margin-right: 20px;
+          color: aqua;
+          font-size: 17px;
+        }
+      }
+      .experiences {
+        .exp {
+          margin: 5% 0;
+          .eOneTitle {
+            color: var(--text-color);
+            letter-spacing: 1.2px;
+            font-weight: 400;
+            margin-bottom: 10px;
+          }
+          .eOneTexts {
+            display: flex;
+            justify-content: space-between;
+            p {
+              color: var(--text-color);
+              width: 70%;
+              font-weight: 100;
+            }
+            .eduration {
+              color: var(--text-color);
+              width: 20%;
+              font-family: Inconsolata, monospace;
+            }
+          }
+        }
+      }
+    }
+  }
+}

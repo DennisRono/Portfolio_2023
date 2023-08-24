@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
+import '../styles/css/about.css'
 import Header from '../components/Header'
 import BreadCrumb from '../components/BreadCrumb'
 import { Helmet } from 'react-helmet'
+import Footer from '../components/Footer'
 
 const About = () => {
   return (
@@ -15,7 +17,119 @@ const About = () => {
       </Helmet>
       <Header />
       <BreadCrumb />
-      <div className="about"></div>
+      <div className="about">
+        <div className="abt_wrapper">
+          <div className="abt_top flex f_row">
+            <div className="abt_left">
+              <h1 className="abt_me_title">
+                About me <code>&lt;/&gt;</code>
+              </h1>
+            </div>
+            <div className="abt_right">
+              <div className="abt_background">
+                <h2 className="abt_b_title">
+                  {' '}
+                  &nbsp;&nbsp;{' '}
+                  <span style={{ paddingRight: '15px' }}>Background</span>{' '}
+                  &nbsp;&nbsp; <span className="secCounter"> .01</span>{' '}
+                </h2>
+                <p className="abt_back_texts">
+                  Hello, I am Dennis. I am currently a student at Machakos
+                  University Kenya. I love building things for the internet. My
+                  native home place is Eldoret Kenya. My intrest in computers
+                  started back when I was in High School when I did a science
+                  fair project on web develpment. As simple as the project was
+                  it taught me alot on how the internet works and moreover gave
+                  me a little Experience on HTML & CSS.
+                  <br />
+                  <br />
+                  currently i focus on finding reliable solutions for software
+                  issues. I am fluent in English and accustomed to working with
+                  cross-cultural, global terms.
+                </p>
+              </div>
+              <div className="abt_tech_stack">
+                <h2 className="abt_stack_title">
+                  <span className="sCounter">02.</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                  Technologies I use
+                </h2>
+                <br />
+                <p className="abt_skillsTexts">
+                  Here are a few technologies I've been working with recently:
+                </p>
+                <nav className="abt_stack_nav">
+                  <ul>
+                    <h2>Languages</h2>
+                    <li>php</li>
+                    <li>Node.js</li>
+                    <li>Java</li>
+                    <li>C#</li>
+                    <li>Python</li>
+                    <li>Javascript (ES6+)</li>
+                  </ul>
+                  <ul>
+                    <h2>Frameworks</h2>
+                    <li>React.js</li>
+                    <li>TensorFlow</li>
+                    <li>Electron</li>
+                    <li>Django</li>
+                  </ul>
+                  <ul>
+                    <h2>Design</h2>
+                    <li>Adobe XD</li>
+                    <li>Figma</li>
+                    <li>Sketch</li>
+                    <li>Webflow</li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div className="eTexts">
+            <h2 className="eTitle">
+              <span className="eCounter">03. </span> &nbsp;&nbsp;&nbsp;&nbsp;
+              Experience & Schooling
+            </h2>
+            <div className="experiences">
+              <div className="exp">
+                <h2 className="eOneTitle">
+                  Samoei Boys Secondary School, Nandi Hills
+                </h2>
+                <div className="eOneTexts">
+                  <p>
+                    at samoei i learned alot of life skills and career
+                    developing skills through my four years there, This is where
+                    i had my first intrest in computers
+                  </p>
+                  <span className="eduration">2016 Jan - 2019 Dec</span>
+                </div>
+              </div>
+              <div className="exp">
+                <h2 className="eOneTitle">Alphax College, Eldoret</h2>
+                <div className="eOneTexts">
+                  <p>
+                    here i took a practical course on web development where i
+                    gained skills in HTML, css, javascript and php. I also got
+                    certified in web development
+                  </p>
+                  <span className="eduration">2020 Jan - 2020 April</span>
+                </div>
+              </div>
+              <div className="exp">
+                <h2 className="eOneTitle">Machakos University, Machakos</h2>
+                <div className="eOneTexts">
+                  <p>
+                    I am currently at Machakos University persuing a course in
+                    computer science. So far so good here
+                  </p>
+                  <span className="eduration">2020 Sept - current</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </Fragment>
   )
 }
