@@ -1,0 +1,28 @@
+.footer {
+  padding-top: 6%;
+  .fwrapper {
+    .fcontainer {
+      .fflex {
+        .fcopy {
+          padding-bottom: 20px;
+          justify-content: center;
+          p {
+            text-align: center;
+            color: var(--text-color);
+            font-weight: 100;
+            font-size: 0.9rem;
+            letter-spacing: 1.5;
+          }
+          .f_red_wrap {
+            padding-left: 5px;
+            .f_Ic {
+              height: 13px;
+              width: 13px;
+              fill: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

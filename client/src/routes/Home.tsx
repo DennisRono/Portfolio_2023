@@ -9,6 +9,9 @@ import Hire from '../assets/images/graduation-cap.png'
 import { ReactComponent as ArrowRight } from '../assets/svg/arrow-right.svg'
 import { ReactComponent as BuyMeCofee } from '../assets/svg/bmc-full-logo.svg'
 import BlogList from '../components/BlogList'
+import Footer from '../components/Footer'
+import Portfolio from '../components/Portfolio'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -45,7 +48,10 @@ const Home = () => {
             <div className="home_landing_right flex">
               <div className="l_cta_wrapper">
                 <div className="l_cta_bg_proj"></div>
-                <div className="l_cta_projects flex f_row f_align_center c_p">
+                <a
+                  href="#projects"
+                  className="l_cta_projects flex f_row f_align_center c_p"
+                >
                   <img src={Projects} alt="" className="lcta_Ic" />
                   <p className="l_cta_par_one">
                     What i've <br />
@@ -54,27 +60,33 @@ const Home = () => {
                   <span>|</span>
                   <p>Projects</p>
                   <ArrowRight className="l_cta_trigger" />
-                </div>
+                </a>
               </div>
               <div className="l_cta_wrapper">
                 <div className="l_cta_bg_proj"></div>
-                <div className="l_cta_projects flex f_row f_align_center c_p">
+                <Link
+                  to="/about-me"
+                  className="l_cta_projects flex f_row f_align_center c_p"
+                >
                   <img src={About} alt="" className="lcta_Ic" />
                   <p className="l_cta_par_one">Know me</p>
                   <span>|</span>
                   <p>About me</p>
                   <ArrowRight className="l_cta_trigger" />
-                </div>
+                </Link>
               </div>
               <div className="l_cta_wrapper">
                 <div className="l_cta_bg_proj"></div>
-                <div className="l_cta_projects flex f_row f_align_center c_p">
+                <Link
+                  to="/resume"
+                  className="l_cta_projects flex f_row f_align_center c_p"
+                >
                   <img src={Hire} alt="" className="lcta_Ic" />
                   <p className="l_cta_par_one">Hire me</p>
                   <span>|</span>
                   <p>Resume</p>
                   <ArrowRight className="l_cta_trigger" />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -83,10 +95,12 @@ const Home = () => {
               <h1 className="home_blog_high_title">Highlights From My Blog</h1>
             </div>
             <div className="home_blog_high_btm">
-              <BlogList />
+              <BlogList count="3" />
             </div>
           </div>
+          <Portfolio />
         </div>
+        <Footer />
       </div>
     </Fragment>
   )

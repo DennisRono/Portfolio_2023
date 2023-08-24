@@ -1,0 +1,22 @@
+.footer {
+  padding-top: 6%;
+}
+.footer .fwrapper .fcontainer .fflex .fcopy {
+  padding-bottom: 20px;
+  justify-content: center;
+}
+.footer .fwrapper .fcontainer .fflex .fcopy p {
+  text-align: center;
+  color: var(--text-color);
+  font-weight: 100;
+  font-size: 0.9rem;
+  letter-spacing: 1.5;
+}
+.footer .fwrapper .fcontainer .fflex .fcopy .f_red_wrap {
+  padding-left: 5px;
+}
+.footer .fwrapper .fcontainer .fflex .fcopy .f_red_wrap .f_Ic {
+  height: 13px;
+  width: 13px;
+  fill: var(--text-color);
+}/*# sourceMappingURL=footer.css.map */

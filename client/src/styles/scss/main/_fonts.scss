@@ -199,3 +199,13 @@
       format('svg'); /* iOS 4.1- */
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url(../../assets/fonts/Space_Mono/SpaceMono-Bold.ttf);
+  src: url(../../assets/fonts/Space_Mono/SpaceMono-Italic.ttf);
+  src: url(../../assets/fonts/Space_Mono/SpaceMono-BoldItalic.ttf);
+  src: url(../../assets/fonts/Space_Mono/SpaceMono-Regular.ttf)
+    format('truetype');
+  font-style: normal;
+}

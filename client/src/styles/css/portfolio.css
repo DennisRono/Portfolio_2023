@@ -1,0 +1,59 @@
+.portfolio {
+  padding-top: 20px;
+}
+.portfolio .pl_wrap .pl_title {
+  color: var(--text-color);
+}
+.portfolio .pl_wrap .pl_sub_title {
+  font-family: "Space Mono";
+  color: var(--text-color);
+}
+.portfolio .pl_wrap .pl_showcase {
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 30px 0;
+}
+.portfolio .pl_wrap .pl_showcase .pl_proj_item {
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .pl_wrap .pl_showcase .pl_proj_item .pl_pr_image {
+  border-radius: 24px;
+}
+.portfolio .pl_wrap .pl_showcase .pl_proj_item .pl_shw_overlap {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.portfolio .pl_wrap .pl_showcase .pl_proj_item .pl_shw_overlap .pl_projname {
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-family: "Space Mono";
+  font-weight: 700;
+  color: rgb(33, 43, 54);
+  writing-mode: vertical-lr;
+  padding-top: 24px;
+  padding-left: 8px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+.portfolio .pl_wrap .pl_showcase .pl_proj_item .pl_shw_overlap .pl_shw_spacer {
+  flex: 1;
+}
+.portfolio .pl_wrap .pl_showcase .pl_proj_item .pl_shw_overlap .pl_shw_stack {
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 0.75rem;
+  font-family: "Space Mono";
+  font-weight: 600;
+  color: rgb(22, 28, 36);
+  writing-mode: vertical-lr;
+  padding-top: 24px;
+  padding-left: 8px;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=portfolio.css.map */

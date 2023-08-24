@@ -37,8 +37,17 @@
           margin-right: 20px;
           position: relative;
           margin: 20px 0;
-          .l_cta_bg_proj {
+          &:nth-child(1) > .l_cta_bg_proj {
             background: linear-gradient(to right, #db2777, #9333ea);
+          }
+          &:nth-child(2) > .l_cta_bg_proj {
+            background: linear-gradient(to right, #8d27db, #33eacc);
+          }
+          &:nth-child(3) > .l_cta_bg_proj {
+            background: linear-gradient(to right, #c3f41f, #ea6133);
+          }
+          .l_cta_bg_proj {
+            //background: linear-gradient(to right, #db2777, #9333ea);
             filter: blur(8px);
             position: absolute;
             top: 0;
