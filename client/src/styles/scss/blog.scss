@@ -1,6 +1,33 @@
 .blog {
   .blogTop {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #404040;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--text-color);
+    .blg_top_Title {
+      color: var(--text-color);
+      font-family: 'VolteRounded-Bold';
+      font-size: 4rem;
+      padding-bottom: 10px;
+    }
+    .blg_search_form {
+      .blg_form_group {
+        border-radius: 7px;
+        border: 1px solid var(--text-color);
+        width: 50%;
+        .blg_srch_input {
+          padding: 10px 20px;
+          width: 84.2%;
+          outline: none;
+          border: none;
+          background-color: transparent;
+          font-size: 1.4rem;
+          color: var(--text-color);
+        }
+        .blg_search_lens {
+          height: 25px;
+          width: 25px;
+          fill: var(--text-color);
+        }
+      }
+    }
   }
 }
