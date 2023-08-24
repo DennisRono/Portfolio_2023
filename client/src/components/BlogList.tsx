@@ -21,7 +21,7 @@ const BlogList = (props: { count: string }) => {
         <div className="bloglist_wrapper">
           {rblogs.map((i) => {
             return (
-              <div className="bl_cont c_p">
+              <div className="bl_cont c_p" key={i.title}>
                 <div className="bl_blg_meta flex f_row f_align_center">
                   <span className="bl_date">{i.datePosted}</span>
                   <span>.</span>
@@ -30,7 +30,11 @@ const BlogList = (props: { count: string }) => {
                 <h1 className="bl_title">{i.title}</h1>
                 <div className="bl_blg_tags">
                   {i.tags.map((j) => {
-                    return <span className="bl_tgs">{j}</span>
+                    return (
+                      <span className="bl_tgs" key={j}>
+                        {j}
+                      </span>
+                    )
                   })}
                 </div>
                 <p className="blg_bl_prev_par">
