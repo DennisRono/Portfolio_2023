@@ -55,14 +55,14 @@
   overflow: hidden;
   background-color: #0c0c23;
 }
-.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_lname {
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_lname {
   width: 100%;
 }
-.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_lname .abt_my_name {
-  text-align: center;
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_lname .abt_my_name {
+  color: var(--text-color);
 }
-.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_lname .abt_career_line {
-  text-align: center;
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_lname .abt_career_line {
+  color: var(--text-color);
 }
 .about .abt_wrapper .abt_top .abt_right {
   flex: 1;
@@ -177,6 +177,82 @@
   line-height: 12px;
   margin-left: -20px;
   margin-top: 10px;
+}
+.about .abt_wrapper .abt_exp {
+  padding: 4rem 0 1rem 0;
+}
+.about .abt_wrapper .abt_exp .abt_exp_title {
+  text-align: center;
+  color: var(--text-color);
+  letter-spacing: 1.5px;
+  font-weight: 400;
+}
+.about .abt_wrapper .abt_exp .abt_exp_title .eCounter {
+  padding-bottom: 2px;
+  margin-right: 10px;
+  color: aqua;
+  font-size: 17px;
+}
+.about .abt_wrapper .abt_exp .abt_career {
+  padding-top: 2rem;
+  gap: 20px;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_left {
+  width: 50%;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_left .abt_career_title {
+  font-family: "Space Mono";
+  color: var(--text-color);
+  padding-bottom: 1rem;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_left .abt_career_par {
+  color: var(--text-color);
+  font-weight: 100;
+  padding-bottom: 20px;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_right {
+  width: 45%;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_right .abt_wid {
+  font-family: "Space Mono";
+  color: var(--text-color);
+  padding-bottom: 10px;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_right .abt_wid_wrapper .abt_wid_item {
+  padding: 1rem;
+  background-color: var(--background-modals);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_right .abt_wid_wrapper .abt_wid_item .abt_tiwid {
+  font-family: "Space Mono";
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_right .abt_wid_wrapper .abt_wid_item ._abt_tiwid {
+  font-family: "Space Mono";
+  color: var(--text-color);
+  font-size: 0.7rem;
+}
+.about .abt_wrapper .abt_exp .abt_visualizations {
+  padding: 1rem 0;
+}
+.about .abt_wrapper .abt_exp .abt_visualizations .abt_vis_wrapper {
+  width: -moz-min-content;
+  width: min-content;
+  margin: 0 auto;
+  gap: 1rem;
+}
+.about .abt_wrapper .abt_exp .abt_visualizations .abt_vis_wrapper .abt_vis_left h3,
+.about .abt_wrapper .abt_exp .abt_visualizations .abt_vis_wrapper .abt_vis_right h3 {
+  font-family: "VolteRounded-Bold";
+  color: var(--text-color);
+  font-size: 5rem;
+  padding-right: 10px;
+}
+.about .abt_wrapper .abt_exp .abt_visualizations .abt_vis_wrapper .abt_vis_left .abt_vis_divider p,
+.about .abt_wrapper .abt_exp .abt_visualizations .abt_vis_wrapper .abt_vis_right .abt_vis_divider p {
+  color: var(--text-color);
 }
 .about .abt_wrapper .eTexts {
   padding: 4rem 0;

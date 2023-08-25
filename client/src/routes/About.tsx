@@ -100,10 +100,71 @@ const About = () => {
               </div>
             </div>
           </div>
+          <div className="abt_exp">
+            <h2 className="abt_exp_title">
+              <span className="eCounter">03.</span>Experience & Career
+            </h2>
+            <div className="abt_career flex f_row">
+              <div className="abt_career_left">
+                <h2 className="abt_career_title">
+                  Full-Stack Software Developer
+                </h2>
+                <p className="abt_career_par">
+                  I'm a creative fullstack developer with <strong>3+</strong>{' '}
+                  years of experience. I specialise in frontend and backend
+                  development for complex scalable web and mobile apps.
+                </p>
+                <p className="abt_career_par">
+                  Since the beginning of my journey as a software developer 3
+                  years ago, I've done remote work for agencies, developed for
+                  startups, and collaborated with talents to create digital
+                  products for both business and consumer use.
+                </p>
+              </div>
+              <div className="abt_career_right">
+                <h4 className="abt_wid"> ~ what i do</h4>
+                <div className="abt_wid_wrapper">
+                  <div className="abt_wid_item">
+                    <h3 className="abt_tiwid">Web Apps & APIs</h3>
+                    <p className="_abt_tiwid">
+                      I develop both front-end & back-end of websites using
+                      Express.js, React.js, Python Flask/Django, Node.js and
+                      Go-lang
+                    </p>
+                  </div>
+                  <div className="abt_wid_item">
+                    <h3 className="abt_tiwid">Mobile Applications</h3>
+                    <p className="_abt_tiwid">
+                      I develop both IOS & android apps using Flutter and React
+                      Native
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="abt_visualizations">
+              <div className="abt_vis_wrapper flex f_row f_align_center">
+                <div className="abt_vis_left flex f_row f_align_center">
+                  <h3>5+</h3>
+                  <div className="abt_vis_divider">
+                    <p>Years of</p>
+                    <p>Experience</p>
+                  </div>
+                </div>
+                <div className="abt_vis_right flex f_row f_align_center">
+                  <h3>30+</h3>
+                  <div className="abt_vis_divider">
+                    <p>Projects</p>
+                    <p>Completed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="eTexts">
             <h2 className="eTitle">
-              <span className="eCounter">03. </span> &nbsp;&nbsp;&nbsp;&nbsp;
-              Experience & Schooling
+              <span className="eCounter">04. </span> &nbsp;&nbsp;&nbsp;&nbsp;
+              Schooling
             </h2>
             <div className="experiences">
               <div className="exp">

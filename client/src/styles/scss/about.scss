@@ -62,14 +62,14 @@ $color6: #ea6133;
               overflow: hidden;
               background-color: #0c0c23;
             }
-            .abt_lname {
-              width: 100%;
-              .abt_my_name {
-                text-align: center;
-              }
-              .abt_career_line {
-                text-align: center;
-              }
+          }
+          .abt_lname {
+            width: 100%;
+            .abt_my_name {
+              color: var(--text-color);
+            }
+            .abt_career_line {
+              color: var(--text-color);
             }
           }
         }
@@ -182,6 +182,86 @@ $color6: #ea6133;
                 line-height: 12px;
                 margin-left: -20px;
                 margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .abt_exp {
+      padding: 4rem 0 1rem 0;
+      .abt_exp_title {
+        text-align: center;
+        color: var(--text-color);
+        letter-spacing: 1.5px;
+        font-weight: 400;
+        .eCounter {
+          padding-bottom: 2px;
+          margin-right: 10px;
+          color: aqua;
+          font-size: 17px;
+        }
+      }
+      .abt_career {
+        padding-top: 2rem;
+        gap: 20px;
+        .abt_career_left {
+          width: 50%;
+          .abt_career_title {
+            font-family: 'Space Mono';
+            color: var(--text-color);
+            padding-bottom: 1rem;
+          }
+          .abt_career_par {
+            color: var(--text-color);
+            font-weight: 100;
+            padding-bottom: 20px;
+          }
+        }
+        .abt_career_right {
+          width: 45%;
+          .abt_wid {
+            font-family: 'Space Mono';
+            color: var(--text-color);
+            padding-bottom: 10px;
+          }
+          .abt_wid_wrapper {
+            .abt_wid_item {
+              padding: 1rem;
+              background-color: var(--background-modals);
+              border-radius: 10px;
+              margin-bottom: 1rem;
+              .abt_tiwid {
+                font-family: 'Space Mono';
+                color: var(--text-color);
+                font-size: 0.9rem;
+              }
+              ._abt_tiwid {
+                font-family: 'Space Mono';
+                color: var(--text-color);
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
+      }
+      .abt_visualizations {
+        padding: 1rem 0;
+        .abt_vis_wrapper {
+          width: min-content;
+          margin: 0 auto;
+          gap: 1rem;
+          .abt_vis_left,
+          .abt_vis_right {
+            h3 {
+              font-family: 'VolteRounded-Bold';
+              color: var(--text-color);
+              font-size: 5rem;
+              padding-right: 10px;
+            }
+            .abt_vis_divider {
+              p {
+                color: var(--text-color);
               }
             }
           }
