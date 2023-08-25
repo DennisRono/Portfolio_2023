@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import BreadCrumb from '../components/BreadCrumb'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
+import ProfileImage from '../assets/images/profile.png'
 
 const About = () => {
   return (
@@ -21,9 +22,23 @@ const About = () => {
         <div className="abt_wrapper">
           <div className="abt_top flex f_row">
             <div className="abt_left">
-              <h1 className="abt_me_title">
-                About me <code>&lt;/&gt;</code>
-              </h1>
+              <div className="abt_p_sticky_wrap">
+                <h1 className="abt_me_title">
+                  About me <code>&lt;/&gt;</code>
+                </h1>
+                <div className="abt_p_wrap">
+                  <div className="abt_p_bg"></div>
+                  <div className="abt_profile_pic">
+                    <img src={ProfileImage} alt="" />
+                  </div>
+                </div>
+                <div className="abt_lname">
+                  <h2 className="abt_my_name">Dennis Kibet R.</h2>
+                  <h4 className="abt_career_line">
+                    Full-Stack Software Developer
+                  </h4>
+                </div>
+              </div>
             </div>
             <div className="abt_right">
               <div className="abt_background">

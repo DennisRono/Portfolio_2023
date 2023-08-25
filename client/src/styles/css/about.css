@@ -2,10 +2,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200;300;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,500&display=swap");
 .about .abt_wrapper .abt_top .abt_left {
   width: 30%;
+  height: 800px;
+  overflow: auto;
 }
-.about .abt_wrapper .abt_top .abt_left .abt_me_title {
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap {
+  position: sticky;
+  height: -moz-min-content;
+  height: min-content;
+  top: 20px;
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_me_title {
   font-family: "Space Mono";
   color: var(--text-color);
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap {
+  position: relative;
+  height: 220px;
+  width: 220px;
+  margin: 2rem 0;
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_p_bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 23px;
+  border: 30px solid transparent;
+  background-clip: padding-box;
+  filter: blur(4px);
+  opacity: 0.8;
+  animation: changeBackground 60s ease-in-out infinite;
+}
+@keyframes changeBackground {
+  0%, 100% {
+    background: linear-gradient(165deg, #db2777, #9333ea);
+  }
+  33.33% {
+    background: linear-gradient(165deg, #8d27db, #33eacc);
+  }
+  66.66% {
+    background: linear-gradient(165deg, #c3f41f, #ea6133);
+  }
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_profile_pic {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  border-radius: 23px;
+  overflow: hidden;
+  background-color: #0c0c23;
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_lname {
+  width: 100%;
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_lname .abt_my_name {
+  text-align: center;
+}
+.about .abt_wrapper .abt_top .abt_left .abt_p_sticky_wrap .abt_p_wrap .abt_lname .abt_career_line {
+  text-align: center;
 }
 .about .abt_wrapper .abt_top .abt_right {
   flex: 1;
