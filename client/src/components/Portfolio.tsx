@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useRef } from 'react'
 import '../styles/css/portfolio.css'
 import iPix from '../assets/images/ipix.png'
 import Casa from '../assets/images/casa.png'
@@ -8,6 +8,40 @@ import TwoSister from '../assets/images/twosister.png'
 import Blnng from '../assets/images/blnng.png'
 
 const Portfolio = () => {
+  const observer = useRef<IntersectionObserver | null>(null)
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2, // Adjust this threshold as needed
+    }
+
+    observer.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          entry.target.classList.add(
+            'animate__animated',
+            'animate__slideInUp',
+            'animate__slow'
+          )
+        }
+      })
+    }, options)
+
+    // Observe all .animated-div elements
+    const animatedDivs = document.querySelectorAll('.pl_proj_item')
+    animatedDivs.forEach((div) => {
+      observer.current!.observe(div)
+    })
+
+    return () => {
+      // Clean up the observer when the component unmounts
+      if (observer.current) {
+        observer.current.disconnect()
+      }
+    }
+  }, [])
   return (
     <Fragment>
       <div className="portfolio" id="projects">

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import 'animate.css'
 import './styles/css/styles.css'
 import Routes from './Routes'
 import { useAppSelector } from './state/hooks'
