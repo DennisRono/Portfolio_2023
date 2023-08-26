@@ -33,15 +33,13 @@ const Home = () => {
                 Hi, I am <span>Dennis Kibet</span>
               </h1>
               <p className="l_intro_par">
-                Welcome to My personal blog where I share my thoughts and
-                learnings.. I am a Data apprentice who is passionate about Data
-                Science, Machine Learning and Artificial Intelligence. In my
-                free time, I like developing side projects and learning new
-                technologies.
+                Welcome to my blog, a haven for my thoughts. I'm a passionate
+                Full Stack Developer, Entrepreneur, and tech enthusiast. In
+                leisure, I craft side projects and explore new technologies.
               </p>
               <p className="l_intro_par">
-                This is my place for thoughts, reflections & everything in
-                between. Have a good read!
+                This is my place for contemplation, candid reflections, and all
+                the nuances. Have a good read!
               </p>
               <BuyMeCofee className="lnd_buymeacofee" />
             </div>

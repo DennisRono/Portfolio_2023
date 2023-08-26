@@ -8,7 +8,7 @@
   font-family: Apercu, "Volte Rounded";
   font-size: 4rem;
   color: var(--text-color);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .home .home_wrapper .landing .home_landing_left .landing_intro_large span {
   font-family: "VolteRounded-Bold";
@@ -29,7 +29,6 @@
   width: 35%;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 2rem;
 }
 .home .home_wrapper .landing .home_landing_right .l_cta_wrapper {
   width: 80%;

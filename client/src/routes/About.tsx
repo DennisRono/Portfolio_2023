@@ -110,15 +110,22 @@ const About = () => {
                   Full-Stack Software Developer
                 </h2>
                 <p className="abt_career_par">
-                  I'm a creative fullstack developer with <strong>3+</strong>{' '}
-                  years of experience. I specialise in frontend and backend
-                  development for complex scalable web and mobile apps.
+                  I am an innovative fullstack developer with over three years
+                  of expertise, specializing in the seamless integration of
+                  frontend and backend components for intricate, scalable web
+                  and mobile applications.{' '}
                 </p>
                 <p className="abt_career_par">
-                  Since the beginning of my journey as a software developer 3
-                  years ago, I've done remote work for agencies, developed for
-                  startups, and collaborated with talents to create digital
-                  products for both business and consumer use.
+                  Throughout my transformative journey as a software artisan
+                  spanning the past three years, I have cultivated a rich
+                  portfolio encompassing remote engagements with prominent
+                  agencies, dynamic collaborations with startups, and
+                  synergistic partnerships with diverse talents. This dynamic
+                  trajectory has culminated in the creation of cutting-edge
+                  digital solutions catering to both business and consumer
+                  domains. My dedication to elevating the technological
+                  landscape is underscored by this exceptional fusion of
+                  experiences.
                 </p>
               </div>
               <div className="abt_career_right">
@@ -142,10 +149,10 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="abt_visualizations">
+            <div className="abt_visualizations p_v_40">
               <div className="abt_vis_wrapper flex f_row f_align_center">
                 <div className="abt_vis_left flex f_row f_align_center">
-                  <h3>5+</h3>
+                  <h3>3+</h3>
                   <div className="abt_vis_divider">
                     <p>Years of</p>
                     <p>Experience</p>

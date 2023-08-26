@@ -125,37 +125,42 @@ My interest in computer programming started back in High School when I decided t
               </div>
             </div>
           </div>
-          <div className="read_blog_body flex f_row">
+          <div className="read_blog_body">
             <div className="r_blg_body_left">
-              <div className="blog_author flex f_row f_align_center">
-                <div className="blg_author_profile">
-                  <img className="image" src={ProfileImage} alt="" />
+              <div className="r_blg_body_left_sticky_wrap">
+                <div className="blog_author flex f_row f_align_center">
+                  <div className="blg_author_profile">
+                    <img className="image" src={ProfileImage} alt="" />
+                  </div>
+                  <div className="blg_author_textuals">
+                    <h2>Dennis Kibet</h2>
+                  </div>
                 </div>
-                <div className="blg_author_textuals">
-                  <h2>Dennis Kibet</h2>
+                <div className="blog_tags flex f_row f_align_center">
+                  <span className="tag_text">spark</span>
+                  <span className="tag_text">Cassandra</span>
+                  <span className="tag_text">Machine Learning</span>
                 </div>
-              </div>
-              <div className="blog_tags flex f_row f_align_center">
-                <span className="tag_text">spark</span>
-                <span className="tag_text">Cassandra</span>
-                <span className="tag_text">Machine Learning</span>
-              </div>
-              <div className="read_blg_similar_blogs">
-                <h3 className="smlar_blg_title">Similar Blogs</h3>
-                <div className="smlar_blgs_t_wrapper">
-                  <Link to="/blog/" className="smlar_blgs_titles c_p">
-                    Building a Chatbot for your E-commerce Business using Django
-                  </Link>
-                </div>
-                <div className="smlar_blgs_t_wrapper">
-                  <Link to="/blog/" className="smlar_blgs_titles c_p">
-                    Building a Chatbot for your E-commerce Business using Django
-                  </Link>
-                </div>
-                <div className="smlar_blgs_t_wrapper">
-                  <Link to="/blog/" className="smlar_blgs_titles c_p">
-                    Building a Chatbot for your E-commerce Business using Django
-                  </Link>
+                <div className="read_blg_similar_blogs">
+                  <h3 className="smlar_blg_title">Similar Blogs</h3>
+                  <div className="smlar_blgs_t_wrapper">
+                    <Link to="/blog/" className="smlar_blgs_titles c_p">
+                      Building a Chatbot for your E-commerce Business using
+                      Django
+                    </Link>
+                  </div>
+                  <div className="smlar_blgs_t_wrapper">
+                    <Link to="/blog/" className="smlar_blgs_titles c_p">
+                      Building a Chatbot for your E-commerce Business using
+                      Django
+                    </Link>
+                  </div>
+                  <div className="smlar_blgs_t_wrapper">
+                    <Link to="/blog/" className="smlar_blgs_titles c_p">
+                      Building a Chatbot for your E-commerce Business using
+                      Django
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
