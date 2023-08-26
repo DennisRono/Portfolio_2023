@@ -10,6 +10,7 @@ import ErrorBoundary from './routes/ErrorBoundary'
 import Blog from './routes/Blog'
 import About from './routes/About'
 import Contact from './routes/Contact'
+import Read from './routes/Read'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +25,11 @@ const router = createBrowserRouter(
       <Route
         path="/contact-me"
         element={<Contact />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/blog/:slug"
+        element={<Read />}
         errorElement={<ErrorBoundary />}
       />
     </>

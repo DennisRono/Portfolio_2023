@@ -24,7 +24,11 @@ const Blog = () => {
           <h1 className="blg_top_Title">All Posts</h1>
           <form className="blg_search_form">
             <div className="blg_form_group flex f_row f_align_center">
-              <input type="text" className="blg_srch_input" />
+              <input
+                type="text"
+                className="blg_srch_input"
+                placeholder="Search..."
+              />
               <Lens className="blg_search_lens c_p" />
             </div>
           </form>

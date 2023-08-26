@@ -299,31 +299,53 @@ const Contact: React.FC = () => {
             </div>
           </div>
           <div className="cont_textuals">
-            <div className="cont_t_high">
-              <div className="cont_ic_wrapper">
-                {/* <Envelope className="cont_t_ic" /> */}
-                <img src={Envelop} alt="" className="cont_t_ic" />
+            <div className="cont_textuals_wrapper">
+              <div className="cont_t_high">
+                <div className="cont_ic_wrapper">
+                  {/* <Envelope className="cont_t_ic" /> */}
+                  <img src={Envelop} alt="" className="cont_t_ic" />
+                </div>
+                <p>
+                  Shoot me an email at{' '}
+                  <a href="mailto:dennisrkibet@gmail.com">
+                    dennisrkibet@gmail.com
+                  </a>{' '}
+                  and i'll get right back to you.
+                </p>
               </div>
-              <p>
-                Shoot me an email at{' '}
-                <a href="mailto:dennisrkibet@gmail.com">
-                  dennisrkibet@gmail.com
-                </a>{' '}
-                and i'll get right back to you.
-              </p>
-            </div>
-            <div className="cont_socials flex f_row f_align_center">
-              <div className="cont_soc_item c_p">
-                <TwitterX className="cont_soc_ic" />
-              </div>
-              <div className="cont_soc_item c_p">
-                <Github className="cont_soc_ic" />
-              </div>
-              <div className="cont_soc_item c_p">
-                <Facebook className="cont_soc_ic" />
-              </div>
-              <div className="cont_soc_item c_p">
-                <LinkedIn className="cont_soc_ic" />
+              <div className="cont_socials flex f_row f_align_center">
+                <a
+                  href="https://x.com/dennisrkibet"
+                  target="_blank"
+                  className="cont_soc_item c_p"
+                  rel="noreferrer"
+                >
+                  <TwitterX className="cont_soc_ic" />
+                </a>
+                <a
+                  href="https://github.com/DennisRono"
+                  target="_blank"
+                  className="cont_soc_item c_p"
+                  rel="noreferrer"
+                >
+                  <Github className="cont_soc_ic" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61550052502186"
+                  target="_blank"
+                  className="cont_soc_item c_p"
+                  rel="noreferrer"
+                >
+                  <Facebook className="cont_soc_ic" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/dennisrkibet/"
+                  target="_blank"
+                  className="cont_soc_item c_p"
+                  rel="noreferrer"
+                >
+                  <LinkedIn className="cont_soc_ic" />
+                </a>
               </div>
             </div>
           </div>

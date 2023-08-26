@@ -102,7 +102,7 @@ const About = () => {
           </div>
           <div className="abt_exp">
             <h2 className="abt_exp_title">
-              <span className="eCounter">03.</span>Experience & Career
+              <span className="eCounter">03.</span>Career
             </h2>
             <div className="abt_career flex f_row">
               <div className="abt_career_left">
@@ -164,7 +164,7 @@ const About = () => {
           <div className="eTexts">
             <h2 className="eTitle">
               <span className="eCounter">04. </span> &nbsp;&nbsp;&nbsp;&nbsp;
-              Schooling
+              Experience & Schooling
             </h2>
             <div className="experiences">
               <div className="exp">
@@ -199,6 +199,20 @@ const About = () => {
                     computer science. So far so good here
                   </p>
                   <span className="eduration">2020 Sept - current</span>
+                </div>
+              </div>
+              <div className="exp">
+                <h2 className="eOneTitle">
+                  Water Resources Authority (Attaché), Nairobi
+                </h2>
+                <div className="eOneTexts">
+                  <p>
+                    As an Attaché at WRA, I adeptly applied ICT expertise,
+                    enhancing tech solutions, workflow efficiency, and
+                    communication. Adept in tech advancements, I boosted
+                    organizational proficiency and innovation.
+                  </p>
+                  <span className="eduration">2023 May - 2023 August</span>
                 </div>
               </div>
             </div>

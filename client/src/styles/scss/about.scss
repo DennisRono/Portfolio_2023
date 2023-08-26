@@ -11,13 +11,14 @@ $color6: #ea6133;
   .abt_wrapper {
     .abt_top {
       .abt_left {
-        width: 30%;
-        height: 800px;
-        overflow: auto;
+        width: 28.7%;
+        height: 770px;
+        margin-right: 20px;
         .abt_p_sticky_wrap {
           position: sticky;
+          position: -webkit-sticky;
           height: min-content;
-          top: 20px;
+          top: 0px;
           .abt_me_title {
             font-family: 'Space Mono';
             color: var(--text-color);

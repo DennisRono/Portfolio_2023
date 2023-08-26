@@ -52,11 +52,11 @@
             min-width: 100%;
             max-height: 200px;
             outline: none;
-            border: 1px solid rgb(211, 211, 211);
+            border: 1px solid var(--text-color);
             padding: 10px 13px;
             box-shadow: none !important;
             border-radius: 5px;
-            background-color: rgb(235, 235, 235);
+            background-color: #e7f1ff;
             display: unset !important;
           }
           .user-input-wrp .inputText:not([value='']) {
@@ -134,7 +134,7 @@
                     }
                   }
                   .content-label {
-                    font-size: 16px;
+                    font-size: 13px;
                     letter-spacing: -0.17px;
                     line-height: 22px;
                     color: var(--text-color);
@@ -232,45 +232,50 @@
   .cont_textuals {
     width: 40%;
     padding-top: 4rem;
-    .cont_t_high {
-      width: 80%;
-      margin: 0 auto;
-      padding-bottom: 20px;
-      &:nth-child(1) {
-        border-bottom: 1px solid #2ac6ff;
-      }
-      .cont_ic_wrapper {
+    height: 650px;
+    .cont_textuals_wrapper {
+      position: sticky;
+      top: 20px;
+      .cont_t_high {
+        width: 80%;
         margin: 0 auto;
-        height: 100px;
-        width: 200px;
-        .cont_t_ic {
-        }
-      }
-      p {
-        color: var(--text-color);
-        text-align: center;
-        a {
-          color: #006aff;
-          text-decoration: underline;
-        }
-      }
-    }
-    .cont_socials {
-      padding: 1.5rem 0;
-      justify-content: center;
-      gap: 10px;
-      .cont_soc_item {
+        padding-bottom: 20px;
         &:nth-child(1) {
-          margin-bottom: -6px;
-          .cont_soc_ic {
-            height: 30px;
-            width: 30px;
+          border-bottom: 1px solid #2ac6ff;
+        }
+        .cont_ic_wrapper {
+          margin: 0 auto;
+          height: 100px;
+          width: 200px;
+          .cont_t_ic {
           }
         }
-        .cont_soc_ic {
-          height: 25px;
-          width: 25px;
-          fill: var(--text-color);
+        p {
+          color: var(--text-color);
+          text-align: center;
+          a {
+            color: #006aff;
+            text-decoration: underline;
+          }
+        }
+      }
+      .cont_socials {
+        padding: 1.5rem 0;
+        justify-content: center;
+        gap: 10px;
+        .cont_soc_item {
+          &:nth-child(1) {
+            margin-bottom: -6px;
+            .cont_soc_ic {
+              height: 30px;
+              width: 30px;
+            }
+          }
+          .cont_soc_ic {
+            height: 25px;
+            width: 25px;
+            fill: var(--text-color);
+          }
         }
       }
     }

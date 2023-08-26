@@ -1,0 +1,31 @@
+.read {
+  min-height: 50vh;
+}
+.read .read_wrapper .read_blog_header .read_blog_date {
+  gap: 0.5rem;
+  width: -moz-min-content;
+  width: min-content;
+  text-align: center;
+  margin: 0 auto;
+}
+.read .read_wrapper .read_blog_header .read_blog_date img {
+  height: 25px;
+  width: 25px;
+}
+.read .read_wrapper .read_blog_header .read_blog_date p {
+  font-family: "Inconsolata", "Space Mono", Apercu;
+  font-weight: 600;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.read .read_wrapper .read_blog_header .read_blog_title {
+  font-family: "VolteRounded-Bold", Apercu, "Space Mono";
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 20px 0;
+  line-height: 3.5rem;
+  font-weight: 800;
+}
+.read .read_wrapper .read_blog_header .r_blg_meta {
+  justify-content: center;
+}/*# sourceMappingURL=read.css.map */
