@@ -52,7 +52,7 @@ const Home = () => {
                   href="#projects"
                   className="l_cta_projects flex f_row f_align_center c_p"
                 >
-                  <img src={Projects} alt="" className="lcta_Ic" />
+                  <img src={Projects} alt="" className="image lcta_Ic" />
                   <p className="l_cta_par_one">
                     What i've <br />
                     worked on
@@ -68,7 +68,7 @@ const Home = () => {
                   to="/about-me"
                   className="l_cta_projects flex f_row f_align_center c_p"
                 >
-                  <img src={About} alt="" className="lcta_Ic" />
+                  <img src={About} alt="" className="image lcta_Ic" />
                   <p className="l_cta_par_one">Know me</p>
                   <span>|</span>
                   <p>About me</p>
@@ -81,7 +81,7 @@ const Home = () => {
                   to="/resume"
                   className="l_cta_projects flex f_row f_align_center c_p"
                 >
-                  <img src={Hire} alt="" className="lcta_Ic" />
+                  <img src={Hire} alt="" className="image lcta_Ic" />
                   <p className="l_cta_par_one">Hire me</p>
                   <span>|</span>
                   <p>Resume</p>

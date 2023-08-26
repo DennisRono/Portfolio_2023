@@ -56,7 +56,7 @@ const Portfolio = () => {
                 <div className="pl_shw_spacer"></div>
                 <span className="pl_shw_stack">Flutter/Django</span>
               </div>
-              <img className="pl_pr_image" src={iPix} alt="" />
+              <img className="image pl_pr_image" src={iPix} alt="" />
               <Link to="/npay" className="pl_pr_learn_more c_p">
                 <div className="plr_lmore_bg"></div>
                 <div className="plr_lmore_wrapper">
@@ -72,7 +72,7 @@ const Portfolio = () => {
                   React.js/Express.js/MongoDB
                 </span>
               </div>
-              <img className="pl_pr_image" src={Shyro} alt="" />
+              <img className="image pl_pr_image" src={Shyro} alt="" />
               <Link to="/npay" className="pl_pr_learn_more c_p">
                 <div className="plr_lmore_bg"></div>
                 <div className="plr_lmore_wrapper">
@@ -86,7 +86,7 @@ const Portfolio = () => {
                 <div className="pl_shw_spacer"></div>
                 <span className="pl_shw_stack">Flutter/Express.js/MySQL</span>
               </div>
-              <img className="pl_pr_image" src={TwoSister} alt="" />
+              <img className="image pl_pr_image" src={TwoSister} alt="" />
               <Link to="/npay" className="pl_pr_learn_more c_p">
                 <div className="plr_lmore_bg"></div>
                 <div className="plr_lmore_wrapper">
@@ -100,7 +100,7 @@ const Portfolio = () => {
                 <div className="pl_shw_spacer"></div>
                 <span className="pl_shw_stack">React.js/Express.js</span>
               </div>
-              <img className="pl_pr_image" src={Blnng} alt="" />
+              <img className="image pl_pr_image" src={Blnng} alt="" />
               <Link to="/npay" className="pl_pr_learn_more c_p">
                 <div className="plr_lmore_bg"></div>
                 <div className="plr_lmore_wrapper">
@@ -116,7 +116,7 @@ const Portfolio = () => {
                   React Native/Express/Postgress
                 </span>
               </div>
-              <img className="pl_pr_image" src={Casa} alt="" />
+              <img className="image pl_pr_image" src={Casa} alt="" />
               <Link to="/npay" className="pl_pr_learn_more c_p">
                 <div className="plr_lmore_bg"></div>
                 <div className="plr_lmore_wrapper">
@@ -130,7 +130,7 @@ const Portfolio = () => {
                 <div className="pl_shw_spacer"></div>
                 <span className="pl_shw_stack">Electron.js/Django/MySQL</span>
               </div>
-              <img className="pl_pr_image" src={Planrr} alt="" />
+              <img className="image pl_pr_image" src={Planrr} alt="" />
               <Link to="/npay" className="pl_pr_learn_more c_p">
                 <div className="plr_lmore_bg"></div>
                 <div className="plr_lmore_wrapper">

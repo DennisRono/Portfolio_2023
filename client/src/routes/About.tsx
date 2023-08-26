@@ -29,7 +29,7 @@ const About = () => {
                 <div className="abt_p_wrap">
                   <div className="abt_p_bg"></div>
                   <div className="abt_profile_pic">
-                    <img src={ProfileImage} alt="" />
+                    <img className="image" src={ProfileImage} alt="" />
                   </div>
                 </div>
                 <div className="abt_lname">

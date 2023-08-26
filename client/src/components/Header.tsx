@@ -19,7 +19,7 @@ const Header = () => {
           <div className="h_wrapper flex f_row f_space_between f_align_center p_v_40">
             <div className="h_brand c_p">
               <Link to="/">
-                <img src={Logo} alt="" className="h_b_image" />
+                <img src={Logo} alt="" className="image h_b_image" />
               </Link>
             </div>
             <div className="h_nav_wrapper flex f_row f_align_center">

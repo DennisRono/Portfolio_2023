@@ -25,6 +25,9 @@
 .f_align_center {
   align-items: center;
 }
+.f_wrap {
+  flex-wrap: wrap;
+}
 .gap_10 {
   gap: 10px;
 }
@@ -70,4 +73,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.image {
+  height: 100%;
+  width: 100%;
 }

@@ -303,7 +303,7 @@ const Contact: React.FC = () => {
               <div className="cont_t_high">
                 <div className="cont_ic_wrapper">
                   {/* <Envelope className="cont_t_ic" /> */}
-                  <img src={Envelop} alt="" className="cont_t_ic" />
+                  <img src={Envelop} alt="" className="image cont_t_ic" />
                 </div>
                 <p>
                   Shoot me an email at{' '}
