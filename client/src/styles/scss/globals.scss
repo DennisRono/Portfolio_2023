@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0;
   border-style: border-box;
-  -webkit-font-smoothing: inherit;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -35,6 +35,7 @@ body {
   direction: ltr;
   transition: background 2s;
   position: relative;
+  tab-size: 4;
 }
 
 .app {

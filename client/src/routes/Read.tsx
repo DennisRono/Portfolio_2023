@@ -20,18 +20,13 @@ const Read = () => {
   <h1>Hey, 👋 Iam Dennis Rono</h1>
 <p>I am a full-stack developer who enjoy writing computer programs ✌</p>
 
-<!-- <a align ="center" href="https://denniskibet.com">
-    <img alt="Finn Neron's Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=DennisRono&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" />
-</a> -->
-
 <div style="height: 300px;">
 <a href="https://denniskibet.com/" class="flex f_align_center f_wrap">
   <img height="137px" src="https://github-readme-stats.vercel.app/api?username=DennisRono&hide_title=true&hide_border=true&show_icons=true&include_all_commits=true&count_private=true&line_height=21&theme=dark" />&nbsp;
   <img height="137px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dennisrono&layout=compact&langs_count=8&hide=scss,html,less,css&show_icons=true&theme=dark&hide_title=true&hide_border=true&card_width=400px" /></a>
 </div>
-<!-- ![Dennis's GitHub stats](https://github-readme-stats.vercel.app/api?username=DennisRono&show_icons=true&theme=dark) -->
 
-<!-- <h2>About Me</h2>
+<h2>About Me</h2>
 <h4>Developer & Designer</h4>
 <p>
 My interest in computer programming started back in High School when I decided to do a science fair project on web development. As simple as my science fair project was, it taught me a lot about HTML & CSS.
@@ -42,7 +37,8 @@ My interest in computer programming started back in High School when I decided t
 <p>
   Currently, my main focus is finding reliable solutions for software issues. I am fluent in English and accustomed to working with cross-cultural, global terms.
 </p>
-<p>Iam currently a student at Machakos university studying Computer science.</p> -->
+<p>Iam currently a student at Machakos university studying Computer science.</p>
+
 <h2>🚀 Some Tools I Use</h2>
 
 ![Python](https://img.shields.io/badge/-Python-000?&logo=Python)
@@ -57,11 +53,7 @@ My interest in computer programming started back in High School when I decided t
 ![React](https://img.shields.io/badge/-React-000?&logo=React)
 ![TensorFlow](https://img.shields.io/badge/-TensorFlow-000?&logo=TensorFlow)
 ![Ruby](https://img.shields.io/badge/-Ruby-000?&logo=Ruby)
-  
-<!--  <hr>
- <a href="https://denniskibet.com/kibet">
- <img src="./img/portfolio.png" align="center" height="290" width="auto" margin="auto">
- </a> -->
+
  
  ## contact me:
 <a href="https://www.instagram.com/finn_neron/">
@@ -97,8 +89,6 @@ My interest in computer programming started back in High School when I decided t
 </p>
 
 ![](https://komarev.com/ghpvc/?username=DennisRono&label=PROFILE+VIEWS)
-
-<!--hello-->
 
   `
 

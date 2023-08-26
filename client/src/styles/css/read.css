@@ -50,6 +50,9 @@
 .read .read_wrapper .read_blog_header .r_blg_meta .r_blg_met_item span {
   color: var(--text-color);
 }
+.read .read_wrapper .read_blog_body {
+  justify-content: space-evenly;
+}
 .read .read_wrapper .read_blog_body .r_blg_body_left {
   width: 25%;
 }
@@ -112,10 +115,12 @@
 .read .read_wrapper .read_blog_body .r_blg_body_right {
   flex: 1;
   padding: 3rem 2rem;
-  font-family: Apercu;
-  font-size: 1.15rem;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1rem;
+  line-height: 1.75;
   overflow-x: scroll;
   overflow-y: hidden;
+  color: var(--text-color);
 }
 .read .read_wrapper .read_blog_body .r_blg_body_right::-webkit-scrollbar {
   width: 8px;

@@ -9,31 +9,31 @@
 .bloglist .bloglist_wrapper .bl_cont:hover {
   box-shadow: var(--box-shadow);
 }
-.bloglist .bloglist_wrapper .bl_cont .bl_blg_meta {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_meta {
   margin-left: 5px;
   margin-bottom: 0.6rem;
 }
-.bloglist .bloglist_wrapper .bl_cont .bl_blg_meta span {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_meta span {
   color: var(--text-color);
 }
-.bloglist .bloglist_wrapper .bl_cont .bl_blg_meta span:nth-child(2) {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_meta span:nth-child(2) {
   font-family: "VolteRounded Bold";
   margin: 5px;
 }
-.bloglist .bloglist_wrapper .bl_cont .bl_title {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_title {
   padding-bottom: 15px;
   font-family: Apercu;
   font-size: 1.5rem;
   color: var(--text-color);
 }
-.bloglist .bloglist_wrapper .bl_cont .bl_blg_tags .bl_tgs {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_tags .bl_tgs {
   color: var(--text-color);
   cursor: pointer;
   padding: 5px 10px;
   position: relative;
   margin-right: 10px;
 }
-.bloglist .bloglist_wrapper .bl_cont .bl_blg_tags .bl_tgs::before {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_tags .bl_tgs::before {
   background: linear-gradient(45deg, #743ad5, #d53a9d);
   border-radius: 50px;
   content: "";
@@ -44,7 +44,7 @@
   padding: 2px;
   position: absolute;
 }
-.bloglist .bloglist_wrapper .bl_cont .blg_bl_prev_par {
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .blg_bl_prev_par {
   padding: 20px 0 10px 0;
   font-size: 1.1rem;
   color: var(--text-color);

@@ -8,49 +8,51 @@
       &:hover {
         box-shadow: var(--box-shadow);
       }
-      .bl_blg_meta {
-        margin-left: 5px;
-        margin-bottom: 0.6rem;
-        span {
-          color: var(--text-color);
-          &:nth-child(2) {
-            font-family: 'VolteRounded Bold';
-            margin: 5px;
+      .bl_cont_link {
+        .bl_blg_meta {
+          margin-left: 5px;
+          margin-bottom: 0.6rem;
+          span {
+            color: var(--text-color);
+            &:nth-child(2) {
+              font-family: 'VolteRounded Bold';
+              margin: 5px;
+            }
           }
         }
-      }
-      .bl_title {
-        padding-bottom: 15px;
-        font-family: Apercu;
-        font-size: 1.5rem;
-        color: var(--text-color);
-      }
-      .bl_blg_tags {
-        .bl_tgs {
+        .bl_title {
+          padding-bottom: 15px;
+          font-family: Apercu;
+          font-size: 1.5rem;
           color: var(--text-color);
-          cursor: pointer;
-          padding: 5px 10px;
-          position: relative;
-          margin-right: 10px;
-          &::before {
-            background: linear-gradient(45deg, #743ad5, #d53a9d);
-            border-radius: 50px;
-            content: '';
-            inset: 0;
-            -webkit-mask: linear-gradient(var(--text-color) 0 0) content-box,
-              linear-gradient(var(--text-color) 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            padding: 2px;
-            position: absolute;
+        }
+        .bl_blg_tags {
+          .bl_tgs {
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 5px 10px;
+            position: relative;
+            margin-right: 10px;
+            &::before {
+              background: linear-gradient(45deg, #743ad5, #d53a9d);
+              border-radius: 50px;
+              content: '';
+              inset: 0;
+              -webkit-mask: linear-gradient(var(--text-color) 0 0) content-box,
+                linear-gradient(var(--text-color) 0 0);
+              -webkit-mask-composite: xor;
+              mask-composite: exclude;
+              padding: 2px;
+              position: absolute;
+            }
           }
         }
-      }
-      .blg_bl_prev_par {
-        padding: 20px 0 10px 0;
-        font-size: 1.1rem;
-        color: var(--text-color);
-        line-height: 1.5rem;
+        .blg_bl_prev_par {
+          padding: 20px 0 10px 0;
+          font-size: 1.1rem;
+          color: var(--text-color);
+          line-height: 1.5rem;
+        }
       }
     }
   }
