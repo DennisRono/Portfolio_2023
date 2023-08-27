@@ -179,16 +179,15 @@ My interest in computer programming started back in High School when I decided t
                   id="comments"
                   repo="DennisRono/Portfolio_2023"
                   repoId="R_kgDOKKZmcg"
-                  category="Announcements"
+                  category="Comments"
                   categoryId="DIC_kwDOKKZmcs4CY5EG"
                   mapping="pathname"
-                  strict="1"
                   reactionsEnabled="1"
                   emitMetadata="0"
                   inputPosition="top"
                   theme={theme}
                   lang="en"
-                  loading="lazy"
+                  loading="eager"
                 />
               </div>
             </div>
