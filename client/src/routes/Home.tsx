@@ -42,7 +42,9 @@ const Home = () => {
                 This is my place for contemplation, candid reflections, and all
                 the nuances. Have a good read!
               </p>
-              <BuyMeCofee className="lnd_buymeacofee" />
+              <Link to="https://www.buymeacoffee.com/dennisrkibet">
+                <BuyMeCofee className="lnd_buymeacofee" />
+              </Link>
             </div>
             <div className="home_landing_right flex">
               <div className="l_cta_wrapper">

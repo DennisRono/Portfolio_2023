@@ -12,6 +12,7 @@ import calendar from '../assets/images/calendar.png'
 import { ReactComponent as Eye } from '../assets/svg/eye.svg'
 import { ReactComponent as Clock } from '../assets/svg/clock.svg'
 import ProfileImage from '../assets/images/profile.png'
+import Giscus from '@giscus/react'
 
 const Read = () => {
   const { slug } = useParams()
@@ -170,6 +171,22 @@ My interest in computer programming started back in High School when I decided t
                 remarkPlugins={[remarkGfm]}
                 children={markdown}
               />
+              <div className="r_blg_body_comments">
+                <Giscus
+                  id="comments"
+                  repo="DennisRono/Portfolio_2023"
+                  repoId="R_kgDOKKZmcg"
+                  category="Announcements"
+                  categoryId="DIC_kwDOKKZmcs4CY5EG"
+                  mapping="pathname"
+                  reactionsEnabled="1"
+                  emitMetadata="0"
+                  inputPosition="top"
+                  theme="light"
+                  lang="en"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
