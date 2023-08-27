@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import Giscus from '@giscus/react'
 import '../styles/css/read.css'
 import { Helmet } from 'react-helmet'
 import { Link, useParams } from 'react-router-dom'
@@ -13,11 +12,9 @@ import calendar from '../assets/images/calendar.png'
 import { ReactComponent as Eye } from '../assets/svg/eye.svg'
 import { ReactComponent as Clock } from '../assets/svg/clock.svg'
 import ProfileImage from '../assets/images/profile.png'
-import { useAppSelector } from '../state/hooks'
+import GiscusWidget from '../components/ComTest'
 
 const Read = () => {
-  //theme
-  const theme = useAppSelector((state: any) => state.theme)
   const { slug } = useParams()
   const markdown = `
   <img class="image" src="https://sabare.me/static/images/Blog/stock-price-prediction.jpg" alt="drawing" style="height: 400px; border-radius: 15px;"/>
@@ -175,20 +172,8 @@ My interest in computer programming started back in High School when I decided t
                 children={markdown}
               />
               <div className="r_blg_body_comments">
-                <Giscus
-                  id="comments"
-                  repo="DennisRono/Portfolio_2023"
-                  repoId="R_kgDOKKZmcg"
-                  category="Comments"
-                  categoryId="DIC_kwDOKKZmcs4CY5EG"
-                  mapping="pathname"
-                  reactionsEnabled="1"
-                  emitMetadata="0"
-                  inputPosition="top"
-                  theme={theme}
-                  lang="en"
-                  loading="eager"
-                />
+                {/* <Comments /> */}
+                <GiscusWidget />
               </div>
             </div>
           </div>
