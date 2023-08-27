@@ -175,7 +175,6 @@ My interest in computer programming started back in High School when I decided t
                 children={markdown}
               />
               <div className="r_blg_body_comments">
-                <div id="comments" className="giscus"></div>
                 <Giscus
                   id="comments"
                   repo="DennisRono/Portfolio_2023"
