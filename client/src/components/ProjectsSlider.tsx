@@ -2,17 +2,14 @@ import React, { useState, useEffect, Fragment } from 'react'
 import '../styles/css/projectsslider.css'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import WeCare from '../assets/images/wecare.png'
-import Casa from '../assets/images/casa.png'
-import Shyro from '../assets/images/shyro.png'
-import Planrr from '../assets/images/planrr.png'
-import TwoSister from '../assets/images/twosister.png'
-import Blnng from '../assets/images/blnng.png'
+import NAnalytics from '../assets/images/n_analytics.png'
+import MedAndGromart from '../assets/images/med_and_gromart.png'
+import NPay from '../assets/images/n_pay.png'
+import Nems from '../assets/images/null_ems.png'
+import WenotiFy from '../assets/images/wenotify.png'
+
 import { Link } from 'react-router-dom'
-//   { id: 2, imageUrl: Casa },
-//   { id: 3, imageUrl: Shyro },
-//   { id: 4, imageUrl: Planrr },
-//   { id: 5, imageUrl: TwoSister },
-//   { id: 6, imageUrl: Blnng },
+
 interface Slide {
   id: number
   imageUrl: string
@@ -33,40 +30,40 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    imageUrl: WeCare,
-    stack: 'React/Express.js/Redis/MySQL',
+    imageUrl: MedAndGromart,
+    stack: 'React.js/Express.js/MySQL',
     title: 'Med & Gromart',
     preview: '',
     slug: 'med-and-gromart',
   },
   {
     id: 3,
-    imageUrl: WeCare,
-    stack: 'React/Express.js/Redis/MySQL',
+    imageUrl: NPay,
+    stack: 'Flutter/Express.js/MySQL',
     title: 'NPay',
     preview: '',
     slug: 'npay',
   },
   {
     id: 4,
-    imageUrl: WeCare,
-    stack: 'React/Express.js/Redis/MySQL',
+    imageUrl: NAnalytics,
+    stack: 'React Native/Express.js/MySQL',
     title: 'N-Analytics',
     preview: '',
     slug: 'n-analytics',
   },
   {
     id: 5,
-    imageUrl: WeCare,
-    stack: 'React/Express.js/Redis/MySQL',
-    title: 'NullEMS',
+    imageUrl: Nems,
+    stack: 'React.js/Express.js/MySQL',
+    title: 'Null-EMS',
     preview: '',
     slug: 'null-ems',
   },
   {
     id: 6,
-    imageUrl: WeCare,
-    stack: 'React/Express.js/Redis/MySQL',
+    imageUrl: WenotiFy,
+    stack: 'React Native/Django/MongoDB',
     title: 'WenotiFy Kenya',
     preview: '',
     slug: 'wenotify-kenya',
