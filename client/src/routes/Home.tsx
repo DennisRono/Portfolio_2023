@@ -10,8 +10,8 @@ import { ReactComponent as ArrowRight } from '../assets/svg/arrow-right.svg'
 import { ReactComponent as BuyMeCofee } from '../assets/svg/bmc-full-logo.svg'
 import BlogList from '../components/BlogList'
 import Footer from '../components/Footer'
-import Portfolio from '../components/Portfolio'
 import { Link } from 'react-router-dom'
+import ProjectsSlider from '../components/ProjectsSlider'
 
 const Home = () => {
   return (
@@ -34,8 +34,9 @@ const Home = () => {
               </h1>
               <p className="l_intro_par">
                 Welcome to my blog, a haven for my thoughts. I'm a passionate
-                Full Stack Developer, Entrepreneur, and tech enthusiast. In
-                leisure, I craft side projects and explore new technologies.
+                Full Stack Software Developer, Entrepreneur, and tech
+                enthusiast. In leisure, I craft side projects and explore new
+                technologies.
               </p>
               <p className="l_intro_par">
                 This is my place for contemplation, candid reflections, and all
@@ -96,7 +97,7 @@ const Home = () => {
               <BlogList count="3" />
             </div>
           </div>
-          <Portfolio />
+          <ProjectsSlider />
         </div>
         <Footer />
       </div>

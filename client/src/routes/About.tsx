@@ -110,22 +110,17 @@ const About = () => {
                   Full-Stack Software Developer
                 </h2>
                 <p className="abt_career_par">
-                  I am an innovative fullstack developer with over three years
-                  of expertise, specializing in the seamless integration of
-                  frontend and backend components for intricate, scalable web
-                  and mobile applications.{' '}
+                  I am an innovative full-stack software developer with over
+                  three years of expertise, specializing in the seamless
+                  integration of frontend and backend components for intricate,
+                  scalable web and mobile applications.{' '}
                 </p>
                 <p className="abt_career_par">
-                  Throughout my transformative journey as a software artisan
-                  spanning the past three years, I have cultivated a rich
-                  portfolio encompassing remote engagements with prominent
-                  agencies, dynamic collaborations with startups, and
-                  synergistic partnerships with diverse talents. This dynamic
-                  trajectory has culminated in the creation of cutting-edge
-                  digital solutions catering to both business and consumer
-                  domains. My dedication to elevating the technological
-                  landscape is underscored by this exceptional fusion of
-                  experiences.
+                  Over the past three years, my journey as a software artisan
+                  led to a portfolio with remote agency work, startup
+                  collaborations, and diverse partnerships. This path resulted
+                  in innovative digital solutions for business and consumer
+                  domains, reflecting my dedication to advancing technology.
                 </p>
               </div>
               <div className="abt_career_right">

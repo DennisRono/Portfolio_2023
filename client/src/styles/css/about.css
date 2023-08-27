@@ -105,10 +105,10 @@
   font-weight: 200;
 }
 .about .abt_wrapper .abt_top .abt_right .abt_background .abt_back_texts::-moz-selection {
-  background: #221427;
+  background: #ff2f4f;
 }
 .about .abt_wrapper .abt_top .abt_right .abt_background .abt_back_texts::selection {
-  background: #221427;
+  background: #ff2f4f;
 }
 .about .abt_wrapper .abt_top .abt_right .abt_tech_stack {
   padding: 5rem 0;
@@ -199,7 +199,7 @@
   gap: 20px;
 }
 .about .abt_wrapper .abt_exp .abt_career .abt_career_left {
-  width: 50%;
+  width: 60%;
 }
 .about .abt_wrapper .abt_exp .abt_career .abt_career_left .abt_career_title {
   font-family: "Space Mono";
@@ -207,12 +207,19 @@
   padding-bottom: 1rem;
 }
 .about .abt_wrapper .abt_exp .abt_career .abt_career_left .abt_career_par {
-  color: var(--text-color);
-  font-weight: 100;
   padding-bottom: 20px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_left .abt_career_par::-moz-selection {
+  background: #ff2f4f;
+}
+.about .abt_wrapper .abt_exp .abt_career .abt_career_left .abt_career_par::selection {
+  background: #ff2f4f;
 }
 .about .abt_wrapper .abt_exp .abt_career .abt_career_right {
-  width: 45%;
+  width: 35%;
 }
 .about .abt_wrapper .abt_exp .abt_career .abt_career_right .abt_wid {
   font-family: "Space Mono";

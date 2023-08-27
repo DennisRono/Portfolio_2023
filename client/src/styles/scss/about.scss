@@ -114,7 +114,7 @@ $color6: #ea6133;
             font-size: 1.2rem;
             font-weight: 200;
             &::selection {
-              background: #221427;
+              background: #ff2f4f;
             }
           }
         }
@@ -207,20 +207,26 @@ $color6: #ea6133;
         padding-top: 2rem;
         gap: 20px;
         .abt_career_left {
-          width: 50%;
+          width: 60%;
           .abt_career_title {
             font-family: 'Space Mono';
             color: var(--text-color);
             padding-bottom: 1rem;
           }
           .abt_career_par {
-            color: var(--text-color);
-            font-weight: 100;
+            // color: var(--text-color);
+            // font-weight: 100;
             padding-bottom: 20px;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 200;
+            &::selection {
+              background: #ff2f4f;
+            }
           }
         }
         .abt_career_right {
-          width: 45%;
+          width: 35%;
           .abt_wid {
             font-family: 'Space Mono';
             color: var(--text-color);
