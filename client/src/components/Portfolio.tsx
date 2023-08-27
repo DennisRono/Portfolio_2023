@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useRef } from 'react'
 import '../styles/css/portfolio.css'
-import iPix from '../assets/images/ipix.png'
+import iPix from '../assets/images/wenotify_png_framed.png'
 import Casa from '../assets/images/casa.png'
 import Shyro from '../assets/images/shyro.png'
 import Planrr from '../assets/images/planrr.png'

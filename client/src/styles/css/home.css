@@ -12,7 +12,11 @@
 }
 .home .home_wrapper .landing .home_landing_left .landing_intro_large span {
   font-family: "VolteRounded-Bold";
-  font-size: 4.2rem;
+  font-size: 4.4rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #db2777, #9333ea);
 }
 .home .home_wrapper .landing .home_landing_left .l_intro_par {
   color: var(--text-color);
