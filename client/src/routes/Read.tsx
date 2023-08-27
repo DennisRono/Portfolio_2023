@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Giscus from '@giscus/react'
 import '../styles/css/read.css'
 import { Helmet } from 'react-helmet'
 import { Link, useParams } from 'react-router-dom'
@@ -12,9 +13,11 @@ import calendar from '../assets/images/calendar.png'
 import { ReactComponent as Eye } from '../assets/svg/eye.svg'
 import { ReactComponent as Clock } from '../assets/svg/clock.svg'
 import ProfileImage from '../assets/images/profile.png'
-import Giscus from '@giscus/react'
+import { useAppSelector } from '../state/hooks'
 
 const Read = () => {
+  //theme
+  const theme = useAppSelector((state: any) => state.theme)
   const { slug } = useParams()
   const markdown = `
   <img class="image" src="https://sabare.me/static/images/Blog/stock-price-prediction.jpg" alt="drawing" style="height: 400px; border-radius: 15px;"/>
@@ -179,12 +182,11 @@ My interest in computer programming started back in High School when I decided t
                   category="Announcements"
                   categoryId="DIC_kwDOKKZmcs4CY5EG"
                   mapping="pathname"
-                  term="Welcome to @giscus/react component!"
                   strict="1"
                   reactionsEnabled="1"
                   emitMetadata="0"
                   inputPosition="top"
-                  theme="light"
+                  theme={theme}
                   lang="en"
                   loading="lazy"
                 />
