@@ -12,7 +12,7 @@ import calendar from '../assets/images/calendar.png'
 import { ReactComponent as Eye } from '../assets/svg/eye.svg'
 import { ReactComponent as Clock } from '../assets/svg/clock.svg'
 import ProfileImage from '../assets/images/profile.png'
-import GiscusWidget from '../components/ComTest'
+import Comments from '../components/Comments'
 
 const Read = () => {
   const { slug } = useParams()
@@ -172,8 +172,7 @@ My interest in computer programming started back in High School when I decided t
                 children={markdown}
               />
               <div className="r_blg_body_comments">
-                {/* <Comments /> */}
-                <GiscusWidget />
+                <Comments />
               </div>
             </div>
           </div>
