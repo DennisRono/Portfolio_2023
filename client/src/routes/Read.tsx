@@ -179,6 +179,8 @@ My interest in computer programming started back in High School when I decided t
                   category="Announcements"
                   categoryId="DIC_kwDOKKZmcs4CY5EG"
                   mapping="pathname"
+                  term="Welcome to @giscus/react component!"
+                  strict="1"
                   reactionsEnabled="1"
                   emitMetadata="0"
                   inputPosition="top"
