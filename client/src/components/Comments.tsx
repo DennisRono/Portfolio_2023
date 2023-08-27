@@ -18,7 +18,7 @@ const Comments: React.FC = () => {
     script.setAttribute('data-input-position', 'top')
     script.setAttribute('data-theme', theme)
     script.setAttribute('data-lang', 'en')
-    script.setAttribute('data-loading', 'eager')
+    script.setAttribute('data-loading', 'lazy')
 
     document.getElementById('comments')?.appendChild(script)
   }, [theme])

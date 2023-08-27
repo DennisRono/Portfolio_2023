@@ -7,8 +7,8 @@ import MedAndGromart from '../assets/images/med_and_gromart.png'
 import NPay from '../assets/images/n_pay.png'
 import Nems from '../assets/images/null_ems.png'
 import WenotiFy from '../assets/images/wenotify.png'
-
 import { Link } from 'react-router-dom'
+import LazyLoad from './LazyLoad'
 
 interface Slide {
   id: number
@@ -73,7 +73,7 @@ const slides: Slide[] = [
 const ProjectsSlider: React.FC = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const [progress, setProgress] = useState(0) // Start at 0%
-  const duration = 7000
+  const duration = 50000
   const intervalTime = 100 // Interval time in milliseconds
 
   useEffect(() => {
@@ -111,11 +111,17 @@ const ProjectsSlider: React.FC = () => {
               <div className="projects_slide_item flex f_row f_align_center">
                 <div className="projects_slide_item_left">
                   <div className="p_s_it_img_wrapper">
-                    <img
+                    <LazyLoad
+                      className="slide-image image"
+                      key={`slide-${activeSlideIndex}`}
+                      alt={`Slide ${activeSlideIndex + 1}`}
+                      src={slides[activeSlideIndex].imageUrl}
+                    />
+                    {/* <img
                       className="slide-image image"
                       src={slides[activeSlideIndex].imageUrl}
                       alt={`Slide ${activeSlideIndex + 1}`}
-                    />
+                    /> */}
                   </div>
                 </div>
                 <div className="projects_slide_item_right">
