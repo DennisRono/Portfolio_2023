@@ -5,6 +5,7 @@ import BreadCrumb from '../components/BreadCrumb'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import ProfileImage from '../assets/images/profile.png'
+import LazyLoad from '../components/LazyLoad'
 
 const About = () => {
   return (
@@ -29,7 +30,13 @@ const About = () => {
                 <div className="abt_p_wrap">
                   <div className="abt_p_bg"></div>
                   <div className="abt_profile_pic">
-                    <img className="image" src={ProfileImage} alt="" />
+                    <LazyLoad
+                      className="slide-image image"
+                      key={`profile-picture`}
+                      alt="my profile picture"
+                      src={ProfileImage}
+                    />
+                    {/* <img className="image" src={ProfileImage} alt="" /> */}
                   </div>
                 </div>
                 <div className="abt_lname">

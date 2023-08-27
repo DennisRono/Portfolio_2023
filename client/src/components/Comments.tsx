@@ -7,6 +7,7 @@ const Comments: React.FC = () => {
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
+    script.setAttribute('defer', 'defer')
     script.setAttribute('data-repo', 'DennisRono/Portfolio_2023')
     script.setAttribute('data-repoid', 'R_kgDOKKZmcg')
     script.setAttribute('data-category', 'Comments')

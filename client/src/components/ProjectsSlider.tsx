@@ -65,7 +65,8 @@ const slides: Slide[] = [
     imageUrl: WenotiFy,
     stack: 'React Native/Django/MongoDB',
     title: 'WenotiFy Kenya',
-    preview: '',
+    preview:
+      "I made an app that helps people easily tell the police about crimes and show proof in real time. This app keeps everyone safe and solves problems like distance and not having records. Let's build a safer community together using this technology!",
     slug: 'wenotify-kenya',
   },
 ]
@@ -73,7 +74,7 @@ const slides: Slide[] = [
 const ProjectsSlider: React.FC = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const [progress, setProgress] = useState(0) // Start at 0%
-  const duration = 50000
+  const duration = 15000
   const intervalTime = 100 // Interval time in milliseconds
 
   useEffect(() => {
