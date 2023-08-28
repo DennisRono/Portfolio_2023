@@ -74,7 +74,7 @@ const slides: Slide[] = [
 const ProjectsSlider: React.FC = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
   const [progress, setProgress] = useState(0) // Start at 0%
-  const duration = 70000
+  const duration = 20000
   const intervalTime = 100 // Interval time in milliseconds
 
   useEffect(() => {

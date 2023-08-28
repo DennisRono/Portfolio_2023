@@ -10,10 +10,17 @@ $color6: #ea6133;
 .about {
   .abt_wrapper {
     .abt_top {
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
       .abt_left {
         width: 28.7%;
         height: 770px;
         margin-right: 20px;
+        @media (max-width: 576px) {
+          width: 100%;
+          height: min-content !important;
+        }
         .abt_p_sticky_wrap {
           position: sticky;
           position: -webkit-sticky;
@@ -28,6 +35,9 @@ $color6: #ea6133;
             height: 220px;
             width: 220px;
             margin: 2rem 0;
+            @media (max-width: 576px) {
+              margin: 2rem auto;
+            }
             .abt_p_bg {
               position: absolute;
               top: 0;
@@ -66,6 +76,9 @@ $color6: #ea6133;
           }
           .abt_lname {
             width: 100%;
+            @media (max-width: 576px) {
+              text-align: center;
+            }
             .abt_my_name {
               color: var(--text-color);
             }
@@ -78,6 +91,9 @@ $color6: #ea6133;
       .abt_right {
         flex: 1;
         padding-top: 3rem;
+        @media (max-width: 576px) {
+          width: 100%;
+        }
         .abt_background {
           .abt_b_title {
             color: var(--text-color);
@@ -88,6 +104,9 @@ $color6: #ea6133;
             font-weight: 400;
             text-align: right;
             padding-right: 70px;
+            @media (max-width: 576px) {
+              text-align: center;
+            }
             &::before {
               background-color: var(--text-color);
               content: '';
@@ -98,6 +117,9 @@ $color6: #ea6133;
               bottom: -20px;
               width: 50%;
               right: -100px;
+              @media (max-width: 576px) {
+                display: none;
+              }
             }
             .secCounter {
               position: absolute;
@@ -107,6 +129,10 @@ $color6: #ea6133;
               padding-right: 20px;
               color: aqua;
               font-size: 17px;
+              @media (max-width: 576px) {
+                position: unset;
+                margin-left: -37px;
+              }
             }
           }
           .abt_back_texts {
