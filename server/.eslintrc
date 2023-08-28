@@ -5,9 +5,8 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": [
-      "./tsconfig.json"
-    ]
+    "sourceType": "module",
+    "tsconfigRootDir": "./tsconfig.json"
   },
   "extends": "airbnb-typescript/base",
   "plugins": [

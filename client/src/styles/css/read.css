@@ -72,6 +72,7 @@
 }
 @media (max-width: 576px) {
   .read .read_wrapper .read_blog_body .r_blg_body_left {
+    order: 2;
     grid-column: span 4;
   }
 }
@@ -163,6 +164,7 @@
 }
 @media (max-width: 576px) {
   .read .read_wrapper .read_blog_body .r_blg_body_right {
+    order: 1;
     grid-column: span 4;
     padding: 2rem 0;
   }
