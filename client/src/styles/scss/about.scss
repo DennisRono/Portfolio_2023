@@ -349,6 +349,10 @@ $color6: #ea6133;
         color: var(--text-color);
         letter-spacing: 1.5px;
         font-weight: 400;
+        @media (max-width: 576px) {
+          font-size: 1.3rem;
+          margin-left: -10px;
+        }
         .eCounter {
           position: absolute;
           bottom: 0;
