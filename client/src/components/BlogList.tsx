@@ -23,7 +23,16 @@ const BlogList = (props: { count: string }) => {
         <div className="bloglist_wrapper">
           {rblogs.map((i) => {
             return (
-              <div className="bl_cont c_p" key={i.title}>
+              <div
+                className="bl_cont c_p"
+                key={i.title}
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+                  })
+                }}
+              >
                 <Link to={`/blog/${i.slug}`} className="bl_cont_link">
                   <div className="bl_blg_meta flex f_row f_align_center">
                     <span className="bl_date">{i.datePosted}</span>
