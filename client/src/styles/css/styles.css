@@ -9,6 +9,11 @@
 .container_12 {
   margin: 0 12%;
 }
+@media (max-width: 576px) {
+  .container_12 {
+    margin: 0 5%;
+  }
+}
 
 .container_20 {
   margin: 0 20%;
@@ -106,4 +111,19 @@
   16.667%, 66.667% {
     background-image: linear-gradient(90deg, #c3f41f, #ea6133);
   }
+}
+@media (max-width: 576px) {
+  /* Your CSS rules for extra small devices */
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Your CSS rules for small devices */
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Your CSS rules for medium devices */
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Your CSS rules for large devices */
+}
+@media (min-width: 1201px) {
+  /* Your CSS rules for extra large devices */
 }/*# sourceMappingURL=styles.css.map */

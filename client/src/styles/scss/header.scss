@@ -1,12 +1,18 @@
 .header {
   .container {
     .h_wrapper {
+      @media (max-width: 576px) {
+        padding: 20px 0;
+      }
       .h_brand {
         height: 35px;
       }
       .h_nav_wrapper {
         .h_navigation {
           padding-right: 20px;
+          @media (max-width: 576px) {
+            display: none;
+          }
           .h_unlist {
             .n_link_item {
               .n_lnk_redirect {

@@ -31,7 +31,7 @@ const BlogList = (props: { count: string }) => {
                     <span className="bl_views">{i.views} views</span>
                   </div>
                   <h1 className="bl_title">{i.title}</h1>
-                  <div className="bl_blg_tags">
+                  <div className="bl_blg_tags flex f_row f_align_center">
                     {i.tags.map((j) => {
                       return (
                         <span className="bl_tgs" key={j}>

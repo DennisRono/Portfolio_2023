@@ -1,6 +1,11 @@
 .bloglist {
   padding: 1rem 0;
 }
+@media (max-width: 576px) {
+  .bloglist {
+    padding: 0.7rem 0;
+  }
+}
 .bloglist .bloglist_wrapper .bl_cont {
   padding: 20px;
   border-radius: 15px;
@@ -9,9 +14,23 @@
 .bloglist .bloglist_wrapper .bl_cont:hover {
   box-shadow: var(--box-shadow);
 }
+@media (max-width: 576px) {
+  .bloglist .bloglist_wrapper .bl_cont {
+    padding: 3px;
+    margin: 12px 0;
+  }
+  .bloglist .bloglist_wrapper .bl_cont:hover {
+    box-shadow: unset !important;
+  }
+}
 .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_meta {
   margin-left: 5px;
   margin-bottom: 0.6rem;
+}
+@media (max-width: 576px) {
+  .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_meta {
+    margin-bottom: 0.3rem;
+  }
 }
 .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_meta span {
   color: var(--text-color);
@@ -26,12 +45,26 @@
   font-size: 1.5rem;
   color: var(--text-color);
 }
+@media (max-width: 576px) {
+  .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_title {
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+  }
+}
+.bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_tags {
+  flex-wrap: wrap !important;
+  gap: 10px;
+}
+@media (max-width: 576px) {
+  .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_tags {
+    display: none;
+  }
+}
 .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_tags .bl_tgs {
   color: var(--text-color);
   cursor: pointer;
   padding: 5px 10px;
   position: relative;
-  margin-right: 10px;
 }
 .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .bl_blg_tags .bl_tgs::before {
   background: linear-gradient(45deg, #743ad5, #d53a9d);
@@ -43,10 +76,25 @@
   mask-composite: exclude;
   padding: 2px;
   position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .blg_bl_prev_par {
   padding: 20px 0 10px 0;
   font-size: 1.1rem;
   color: var(--text-color);
   line-height: 1.5rem;
+}
+@media (max-width: 576px) {
+  .bloglist .bloglist_wrapper .bl_cont .bl_cont_link .blg_bl_prev_par {
+    padding: 0;
+    line-height: 1.2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }/*# sourceMappingURL=bloglist.css.map */

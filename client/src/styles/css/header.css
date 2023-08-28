@@ -1,8 +1,18 @@
+@media (max-width: 576px) {
+  .header .container .h_wrapper {
+    padding: 20px 0;
+  }
+}
 .header .container .h_wrapper .h_brand {
   height: 35px;
 }
 .header .container .h_wrapper .h_nav_wrapper .h_navigation {
   padding-right: 20px;
+}
+@media (max-width: 576px) {
+  .header .container .h_wrapper .h_nav_wrapper .h_navigation {
+    display: none;
+  }
 }
 .header .container .h_wrapper .h_nav_wrapper .h_navigation .h_unlist .n_link_item .n_lnk_redirect {
   font-family: Apercu;
