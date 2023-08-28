@@ -67,6 +67,12 @@ const Home = () => {
                 <div className="l_cta_bg_proj"></div>
                 <Link
                   to="/about-me"
+                  onClick={() => {
+                    window.scrollTo({
+                      top: 0,
+                      behavior: 'smooth',
+                    })
+                  }}
                   className="l_cta_projects flex f_row f_align_center c_p"
                 >
                   <img src={About} alt="" className="image lcta_Ic" />
