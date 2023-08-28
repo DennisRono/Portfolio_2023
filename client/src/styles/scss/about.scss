@@ -29,6 +29,9 @@ $color6: #ea6133;
           .abt_me_title {
             font-family: 'Space Mono';
             color: var(--text-color);
+            @media (max-width: 576px) {
+              text-align: center;
+            }
           }
           .abt_p_wrap {
             position: relative;
@@ -146,6 +149,9 @@ $color6: #ea6133;
         }
         .abt_tech_stack {
           padding: 5rem 0;
+          @media (max-width: 576px) {
+            padding: 2rem 0;
+          }
           .abt_stack_title {
             color: var(--text-color);
             white-space: nowrap;
@@ -163,6 +169,9 @@ $color6: #ea6133;
               position: relative;
               bottom: -20px;
               width: 50%;
+              @media (max-width: 576px) {
+                display: none;
+              }
             }
             .sCounter {
               position: absolute;
@@ -182,15 +191,25 @@ $color6: #ea6133;
             display: flex;
             justify-content: space-between;
             margin-left: 40px;
+            @media (max-width: 576px) {
+              margin-left: 0;
+              justify-content: space-evenly;
+            }
             ul {
               margin-right: 50px;
               margin-top: 30px;
+              @media (max-width: 576px) {
+                margin-right: 20px;
+              }
               h2 {
                 color: var(--text-color);
                 padding: 0;
                 margin-bottom: -10px;
                 margin-left: -10px;
                 font-size: 22px;
+                @media (max-width: 576px) {
+                  font-size: 0.9rem;
+                }
               }
               li {
                 position: relative;
@@ -199,6 +218,9 @@ $color6: #ea6133;
                 color: var(--text-color);
                 font-size: 18px;
                 font-weight: 200;
+                @media (max-width: 576px) {
+                  font-size: 0.8rem;
+                }
               }
               li:after {
                 content: '▹';
@@ -209,6 +231,9 @@ $color6: #ea6133;
                 line-height: 12px;
                 margin-left: -20px;
                 margin-top: 10px;
+                @media (max-width: 576px) {
+                  margin-top: 2px;
+                }
               }
             }
           }
@@ -217,6 +242,9 @@ $color6: #ea6133;
     }
     .abt_exp {
       padding: 4rem 0 1rem 0;
+      @media (max-width: 576px) {
+        padding: 2rem 0 1rem 0;
+      }
       .abt_exp_title {
         text-align: center;
         color: var(--text-color);
@@ -232,8 +260,14 @@ $color6: #ea6133;
       .abt_career {
         padding-top: 2rem;
         gap: 20px;
+        @media (max-width: 576px) {
+          flex-direction: column;
+        }
         .abt_career_left {
           width: 60%;
+          @media (max-width: 576px) {
+            width: 100%;
+          }
           .abt_career_title {
             font-family: 'Space Mono';
             color: var(--text-color);
@@ -253,6 +287,9 @@ $color6: #ea6133;
         }
         .abt_career_right {
           width: 35%;
+          @media (max-width: 576px) {
+            width: 100%;
+          }
           .abt_wid {
             font-family: 'Space Mono';
             color: var(--text-color);
@@ -291,6 +328,9 @@ $color6: #ea6133;
               color: var(--text-color);
               font-size: 5rem;
               padding-right: 10px;
+              @media (max-width: 576px) {
+                font-size: 2rem;
+              }
             }
             .abt_vis_divider {
               p {
@@ -330,15 +370,25 @@ $color6: #ea6133;
           .eOneTexts {
             display: flex;
             justify-content: space-between;
+            @media (max-width: 576px) {
+              flex-direction: column;
+            }
             p {
               color: var(--text-color);
               width: 70%;
               font-weight: 100;
+              @media (max-width: 576px) {
+                width: 100%;
+                padding-bottom: 10px;
+              }
             }
             .eduration {
               color: var(--text-color);
               width: 20%;
               font-family: Inconsolata, monospace;
+              @media (max-width: 576px) {
+                width: 100%;
+              }
             }
           }
         }
