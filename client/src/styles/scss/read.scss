@@ -157,6 +157,9 @@
         &::-webkit-scrollbar-track {
           background-color: transparent;
         }
+        .r_blg_body_comments {
+          width: 99%;
+        }
         @media (max-width: 576px) {
           grid-column: span 4;
           padding: 2rem 0;

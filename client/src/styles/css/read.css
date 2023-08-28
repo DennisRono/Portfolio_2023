@@ -158,6 +158,9 @@
 .read .read_wrapper .read_blog_body .r_blg_body_right::-webkit-scrollbar-track {
   background-color: transparent;
 }
+.read .read_wrapper .read_blog_body .r_blg_body_right .r_blg_body_comments {
+  width: 99%;
+}
 @media (max-width: 576px) {
   .read .read_wrapper .read_blog_body .r_blg_body_right {
     grid-column: span 4;
