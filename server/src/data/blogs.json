@@ -85,20 +85,6 @@
       "preview": "JavaScript is a fundamental programming language..."
     },
     {
-      "title": "testing the new blog writing page from the website",
-      "tags": [
-        "test",
-        "react",
-        "typescript",
-        "javascript"
-      ],
-      "content": "# Cybersecurity Best Practices: Keeping Your Digital World Safe 🛡️\n\nIn today's interconnected world, safeguarding your online presence is more important than ever. Cybersecurity is like a digital fortress that protects your personal information, sensitive data, and online activities from prying eyes and malicious actors. Whether you're a tech guru or just getting started, these simple best practices will help you build your own armor against cyber threats.\n\n<br>\n\n## 1. **Strong Passwords, Stronger Defense** 💪\n\nYour passwords are the keys to your digital kingdom. Create unique and strong passwords for every online account. Combine uppercase and lowercase letters, numbers, and special characters to make them tough to crack. Here's a sample of a strong password:\n\n```plaintext\nMy$ecureP@ssw0rd2023!\n```\n\n<br>\n\n## 2. **Two-Factor Authentication (2FA)** 📱\n\nAdd an extra layer of protection by enabling 2FA wherever possible. This requires you to provide a second form of verification, such as a code sent to your phone, in addition to your password. It's like having a digital bouncer at the entrance of your accounts.\n\n<br>\n\n## 3. **Regular Software Updates** 🔄\n\nKeep your operating system, apps, and antivirus software up to date. Developers often release updates to fix vulnerabilities that hackers could exploit. Set your software to update automatically for convenience.\n\n<br>\n\n## 4. **Beware of Phishing** 🎣\n\nPhishing emails and messages are like digital bait used by cybercriminals to hook you into revealing sensitive information. Be cautious when clicking links or providing personal info. When in doubt, contact the sender directly through official channels.\n\n<br>\n\n## 5. **Secure Your Wi-Fi Network** 📶\n\nChange the default password of your Wi-Fi router and use strong encryption (WPA3 is recommended). Avoid using common names for your network (like \"HomeWiFi\") that could make you an easy target.\n\n<br>\n\n## 6. **Firewall Protection** 🚧\n\nEnable the built-in firewall on your operating system or consider using a third-party firewall. Firewalls act like security guards, monitoring and controlling incoming and outgoing traffic.\n\n<br>\n\n## 7. **Backup Your Data** ☁️\n\nRegularly back up your important files to an external hard drive or a secure cloud storage service. This way, even if you're hit by ransomware or other threats, your data remains safe.\n\n<br>\n\n## 8. **Secure Coding Practices** 💻\n\nIf you're a developer, following secure coding practices is crucial. Sanitize inputs, validate data, and use prepared statements to prevent common attacks like SQL injection. Here's an example in Python using SQLite:\n\n```python\nimport sqlite3\n\nconn = sqlite3.connect(\"mydatabase.db\")\ncursor = conn.cursor()\n\nusername = input(\"Enter your username: \")\npassword = input(\"Enter your password: \")\n\n# Use parameterized query to prevent SQL injection\n\ncursor.execute(\"SELECT * FROM users WHERE username = ? AND password = ?\", (username, password))\n\n# Fetch the result and perform further actions\n\n# ...\n\nconn.close()\n```\n\nStay curious, stay cautious, and stay secure! 🛡️🔒\n\n",
-      "views": 0,
-      "datePosted": "2023-08-29T17:05:23.921Z",
-      "slug": "testing-the-new-blog-writing-page-from-the-website",
-      "preview": "string"
-    },
-    {
       "views": 0,
       "datePosted": "Tue Aug 29 2023",
       "title": "testing the new blog writing page from the website",
