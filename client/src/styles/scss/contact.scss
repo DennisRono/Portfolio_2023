@@ -58,6 +58,7 @@
             border-radius: 5px;
             background-color: #e7f1ff;
             display: unset !important;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           }
           .user-input-wrp .inputText:not([value='']) {
             background-color: rgb(255, 219, 166);
@@ -65,7 +66,7 @@
           .user-input-wrp .floating-label {
             position: absolute;
             pointer-events: none;
-            top: 30px;
+            top: 27px;
             left: 10px;
             transition: 0.2s ease all;
             opacity: 0.5;

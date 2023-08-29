@@ -1,5 +1,13 @@
 let blog = [
   {
+    title: 'The best hello testing Page',
+    datePosted: '2023-08-20',
+    views: 542,
+    tags: ['neural networks', 'deep learning', 'artificial intelligence'],
+    slug: 'hello',
+    preview: 'Neural networks are a fundamental concept in deep learning...',
+  },
+  {
     title: 'Introduction to Neural Networks and Deep Learning',
     datePosted: '2023-08-20',
     views: 542,

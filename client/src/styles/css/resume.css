@@ -1,0 +1,44 @@
+.resume .resume_wrapper {
+  position: relative;
+  height: 55.1vh;
+}
+.resume .resume_wrapper .resume_req_form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.resume .resume_wrapper .resume_req_form .res_res_frm {
+  background-color: var(--background-modals);
+  border-radius: 23px;
+  overflow: hidden;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.resume .resume_wrapper .resume_req_form .res_res_frm .res_req_frm_group {
+  flex: 1;
+  width: 100%;
+}
+.resume .resume_wrapper .resume_req_form .res_res_frm .res_req_frm_group .res_req_input {
+  all: unset;
+  padding: 10px 10px 10px 20px;
+  width: 350px;
+  color: var(--text-color);
+}
+.resume .resume_wrapper .resume_req_form .res_res_frm .res_req_btn {
+  padding: 10px 20px;
+  background-color: #2ac6ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  width: -moz-min-content;
+  width: min-content;
+}
+.resume .resume_wrapper .res_req_info {
+  text-align: center;
+  color: var(--text-color);
+}/*# sourceMappingURL=resume.css.map */

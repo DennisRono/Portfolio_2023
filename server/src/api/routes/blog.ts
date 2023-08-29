@@ -1,14 +1,11 @@
 import express from 'express'
 import * as fs from 'fs'
 import * as path from 'path'
+import blglist from '../../data/blogs'
 
 const router = express.Router()
 
-type MdResponse = {
-  data: string | null
-}
-
-router.post<{}, MdResponse>('/', (req, res) => {
+router.post<{}, {}>('/', (req, res) => {
   function readMarkdownFile(filePath: string): string | null {
     try {
       const markdownContent = fs.readFileSync(filePath, 'utf-8')
@@ -22,11 +19,13 @@ router.post<{}, MdResponse>('/', (req, res) => {
     __dirname,
     '../../markdown/' + req.body.file
   )
+  const blogmeta = blglist.find((item) => item.slug === req.body.slug)
   const markdownContent = readMarkdownFile(markdownFilePath)
-  if (markdownContent) {
-    res.status(200).json({ data: markdownContent })
+  console.log({ data: markdownContent, meta: blogmeta })
+  if (markdownContent && blogmeta) {
+    res.status(200).json({ data: markdownContent, meta: blogmeta })
   } else {
-    res.status(400).json({ data: markdownContent })
+    res.status(400).json({ data: markdownContent, meta: blogmeta })
   }
 })
 
