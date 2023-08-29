@@ -15,7 +15,7 @@ import MarkdownReader from '../markdown/MarkdownReader'
 const Read = () => {
   const { slug } = useParams()
   //path to makdown file
-  const markdown = 'starter.md'
+  const markdown = slug + '.md'
 
   return (
     <Fragment>
