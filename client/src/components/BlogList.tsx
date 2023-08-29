@@ -69,14 +69,7 @@ const BlogList = (props: { count: string }) => {
                         )
                       })}
                     </div>
-                    <p className="blg_bl_prev_par">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Eaque architecto, iste aut assumenda possimus cupiditate
-                      recusandae ab nam, quidem maiores est, fuga eligendi
-                      aliquid optio alias doloribus neque veniam? Nostrum non
-                      accusamus quas, maxime magnam quibusdam corporis aliquam
-                      nihil aspernatur sint autem labore adipisci dolorum.
-                    </p>
+                    <p className="blg_bl_prev_par">{i.preview}</p>
                   </Link>
                 </div>
               )
