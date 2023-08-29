@@ -76,7 +76,13 @@ const Read = () => {
       <BreadCrumb />
       <div className="read">
         {isError ? (
-          <p>There was an error loading the blog!</p>
+          <div className="read_error">
+            <h2 className="read_not_found">404</h2>
+            <p className="read_par_err">
+              <strong>broken link</strong> - the blog you are looking for does
+              not exist in our servers
+            </p>
+          </div>
         ) : (
           <div className="read_wrapper">
             <div className="read_blog_header">
@@ -111,9 +117,11 @@ const Read = () => {
                     </div>
                   </div>
                   <div className="blog_tags flex f_row f_align_center">
-                    <span className="tag_text">spark</span>
-                    <span className="tag_text">Cassandra</span>
-                    <span className="tag_text">Machine Learning</span>
+                    {meta.status
+                      ? meta.meta.tags.map((i) => {
+                          return <span className="tag_text">{i}</span>
+                        })
+                      : ''}
                   </div>
                   <div className="read_blg_similar_blogs">
                     <h3 className="smlar_blg_title">Similar Blogs</h3>

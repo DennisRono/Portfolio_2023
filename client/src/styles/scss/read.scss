@@ -1,5 +1,17 @@
 .read {
   min-height: 50vh;
+  .read_error {
+    padding-top: 4rem;
+    .read_not_found {
+      font-family: 'Space Mono', 'VolteRounded-Bold', Apercu;
+      color: var(--text-color);
+      font-size: 3rem;
+    }
+    .read_par_err {
+      font-size: 1.5rem;
+      color: var(--text-color);
+    }
+  }
   .read_wrapper {
     .read_blog_header {
       border-bottom: 1px solid var(--text-color);
