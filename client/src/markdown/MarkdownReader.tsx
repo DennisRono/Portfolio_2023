@@ -17,7 +17,7 @@ const MarkdownReader: React.FC<MarkdownReaderProps> = ({ filePath }) => {
         const res = await api(
           'POST',
           'blog',
-          { file: 'starter.md' },
+          { file: filePath },
           {
             'Content-Type': 'application/json',
           }

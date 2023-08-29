@@ -16,6 +16,7 @@ const Read = () => {
   const { slug } = useParams()
   //path to makdown file
   const markdown = slug + '.md'
+  console.log(markdown)
 
   return (
     <Fragment>
