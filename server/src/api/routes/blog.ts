@@ -1,7 +1,7 @@
 import express from 'express'
 import * as fs from 'fs'
 import * as path from 'path'
-import blglist from '../../data/blogs'
+import blglist from '../../data/blogs.json'
 
 const router = express.Router()
 
@@ -19,7 +19,7 @@ router.post<{}, {}>('/', (req, res) => {
     __dirname,
     '../../markdown/' + req.body.file
   )
-  const blogmeta = blglist.find((item) => item.slug === req.body.slug)
+  const blogmeta = blglist.blogs.find((item) => item.slug === req.body.slug)
   const markdownContent = readMarkdownFile(markdownFilePath)
   console.log({ data: markdownContent, meta: blogmeta })
   if (markdownContent && blogmeta) {

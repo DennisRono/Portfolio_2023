@@ -1,0 +1,102 @@
+.newblog {
+  .newblog_wrapper {
+    .newblog_title {
+      font-family: 'Space Mono';
+      font-size: 3rem;
+      color: var(--text-color);
+    }
+    .nwblg_wrap {
+      .newblog_form {
+        .nwblg_form {
+          .newblog_form_group {
+            margin: 10px;
+            label {
+              font-size: 1.2rem;
+              color: var(--text-color);
+              margin-left: 5px;
+            }
+            .formgroup_input {
+              outline: none;
+              border: none;
+              padding: 15px;
+              width: 100%;
+              border-radius: 9px;
+              font-size: 1.4rem;
+              color: var(--text-color);
+              margin-top: 5px;
+              background-color: var(--background-modals);
+            }
+            .tags-container {
+              gap: 5px;
+              padding: 10px 0;
+              .new_tag {
+                padding: 5px;
+                background-color: #7ea9ff;
+                border-radius: 10px;
+                font-family: Apercu;
+                font-weight: 400;
+                cursor: pointer;
+              }
+            }
+            .formgroup_input_textarea {
+              background-color: #292933;
+              color: aliceblue;
+              max-width: calc(100% - 5px);
+              min-width: calc(100% - 5px);
+              min-height: 300px;
+              height: 500px;
+              font-size: 1rem;
+              &::-webkit-scrollbar {
+                width: 4px;
+                cursor: pointer;
+              }
+              &::-webkit-scrollbar-thumb {
+                background-color: #9bc1ff;
+                border-radius: 2px;
+                cursor: pointer;
+              }
+              &::-webkit-scrollbar-thumb:hover {
+                background-color: #79acff;
+              }
+              &::-webkit-scrollbar-track {
+                background-color: transparent;
+                cursor: pointer;
+              }
+            }
+          }
+          .newblog_submit_preview {
+            justify-content: space-between;
+            div {
+              p {
+                margin-left: 20px;
+                color: var(--text-color);
+                font-family: Apercu;
+                font-size: 1.3rem;
+              }
+            }
+            .nwblg_btn {
+              padding: 10px 20px;
+              background-color: #2ac6ff;
+              color: #fff;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 1.6px;
+              text-transform: uppercase;
+              width: min-content;
+              margin-left: 20px;
+              border-radius: 9px;
+            }
+          }
+        }
+      }
+    }
+    .newblog_preview {
+      font-family: Apercu;
+      .nwblg_preview {
+        font-family: 'Space Mono';
+        font-size: 3rem;
+        color: var(--text-color);
+      }
+    }
+  }
+}

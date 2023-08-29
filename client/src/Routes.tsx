@@ -12,12 +12,18 @@ import About from './routes/About'
 import Contact from './routes/Contact'
 import Read from './routes/Read'
 import Resume from './routes/Resume'
+import NewBlog from './routes/NewBlog'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Home />} errorElement={<ErrorBoundary />} />
       <Route path="/blog" element={<Blog />} errorElement={<ErrorBoundary />} />
+      <Route
+        path="/new-blog"
+        element={<NewBlog />}
+        errorElement={<ErrorBoundary />}
+      />
       <Route
         path="/resume"
         element={<Resume />}
