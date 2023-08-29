@@ -1,7 +1,7 @@
 let blog = [
   {
     title: 'The best hello testing Page',
-    datePosted: '2023-08-20',
+    datePosted: 'Sunday, Aug 20, 2023',
     views: 542,
     tags: ['neural networks', 'deep learning', 'artificial intelligence'],
     slug: 'hello',
@@ -33,7 +33,7 @@ let blog = [
   },
   {
     title: 'Cybersecurity Best Practices for Protecting Your Digital Life',
-    datePosted: '2023-06-25',
+    datePosted: 'Tuesday, Aug 29, 2023',
     views: 421,
     tags: ['cybersecurity', 'online privacy', 'digital security'],
     slug: 'cybersecurity-best-practices',
