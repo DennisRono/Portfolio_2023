@@ -21,7 +21,6 @@ router.post<{}, {}>('/', (req, res) => {
   )
   const blogmeta = blglist.blogs.find((item) => item.slug === req.body.slug)
   const markdownContent = readMarkdownFile(markdownFilePath)
-  console.log({ data: markdownContent, meta: blogmeta })
   if (markdownContent && blogmeta) {
     res.status(200).json({ data: markdownContent, meta: blogmeta })
   } else {
