@@ -4,9 +4,14 @@
 }
 .resume .resume_wrapper .resume_req_form {
   position: absolute;
-  top: 40%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -15%);
+}
+.resume .resume_wrapper .resume_req_form .grad_cap_resume {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
 }
 .resume .resume_wrapper .resume_req_form .res_res_frm {
   background-color: var(--background-modals);
