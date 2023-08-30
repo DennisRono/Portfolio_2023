@@ -5,7 +5,7 @@
   color: var(--text-color);
   position: relative;
   overflow: hidden;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 @media (max-width: 576px) {
   .BreadCrumb .br_crumb_text {
@@ -15,14 +15,14 @@
 .BreadCrumb .br_crumb_text .typewriter_infinite {
   position: absolute;
   top: 2px;
-  font-size: 1.7rem;
+  font-size: 0.8rem;
   color: var(--text-color);
   animation: cursor-blink 0.8s infinite;
 }
 @media (max-width: 576px) {
   .BreadCrumb .br_crumb_text .typewriter_infinite {
     top: -2px;
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 
