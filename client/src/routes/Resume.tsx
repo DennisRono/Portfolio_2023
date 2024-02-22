@@ -8,31 +8,30 @@ import api from '../api/axios'
 import { toast } from 'react-toastify'
 const Resume = () => {
   const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleRequest = async (e: FormEvent) => {
     e.preventDefault()
+    setLoading(true)
     if (email !== '') {
-      const res: any = api('POST', 'hire-me', { email: email })
+      const res: any = await api('POST', 'hire-me', { email: email })
+      console.log(res)
+
       if (res.status === 200) {
+        setLoading(false)
         toast('Request received', {
           type: 'success',
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          theme: 'light',
+        })
+      } else {
+        setLoading(false)
+        toast('Error handling request! Please retry', {
+          type: 'error',
         })
       }
     } else {
+      setLoading(false)
       toast('Email is required', {
         type: 'error',
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        theme: 'light',
       })
     }
   }
@@ -52,7 +51,7 @@ const Resume = () => {
             >
               <div className="res_req_frm_group">
                 <input
-                  type="text"
+                  type="email"
                   value={email}
                   className="res_req_input"
                   placeholder="Type in your email..."
@@ -62,7 +61,7 @@ const Resume = () => {
                 />
               </div>
               <button type="submit" className="c_p btn res_req_btn">
-                request
+                {loading ? <div className="dot-flashing"></div> : 'request'}
               </button>
             </form>
             <p className="res_req_info">

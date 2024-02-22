@@ -1,7 +1,7 @@
 import express from 'express'
 
 import MessageResponse from '../interfaces/MessageResponse'
-import hire from './routes/hire'
+import routes from './routes'
 
 const router = express.Router()
 
@@ -11,6 +11,6 @@ router.get<{}, MessageResponse>('/', (req, res) => {
   })
 })
 
-router.use('/', hire)
+router.use('/', routes)
 
 export default router

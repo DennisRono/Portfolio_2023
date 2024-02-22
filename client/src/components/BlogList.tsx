@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import api from '../api/axios'
 
 interface RBlogs {
-  datePosted: string
+  createdAt: string
   views: number
   title: string
   tags: Array<string>
@@ -21,10 +21,10 @@ const BlogList = (props: { count: string }) => {
   useEffect(() => {
     try {
       const fetchBlogs = async (no: number) => {
-        const res = await api('POST', 'bloglist', { no: no })
+        const res = await api('GET', 'bloglist', { no: no })
         console.log(res.data)
         if (res.status === 200) {
-          setBlogs({ status: 'success', data: res.data.data })
+          setBlogs({ status: 'success', data: res.data.blogs })
         } else {
           setBlogs({ status: 'error', data: [] })
         }
@@ -55,7 +55,13 @@ const BlogList = (props: { count: string }) => {
                 >
                   <Link to={`/blog/${i.slug}`} className="bl_cont_link">
                     <div className="bl_blg_meta flex f_row f_align_center">
-                      <span className="bl_date">{i.datePosted}</span>
+                      <span className="bl_date">
+                        {new Intl.DateTimeFormat('en-US', {
+                          day: 'numeric',
+                          month: 'short',
+                          year: 'numeric',
+                        }).format(new Date(i.createdAt))}
+                      </span>
                       <span>.</span>
                       <span className="bl_views">{i.views} views</span>
                     </div>
