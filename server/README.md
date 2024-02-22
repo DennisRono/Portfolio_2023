@@ -1,1 +1,1 @@
-# Dennis Kibet Backend
+# Dennis Kibet Server

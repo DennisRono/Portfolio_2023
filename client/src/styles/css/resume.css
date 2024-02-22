@@ -1,6 +1,6 @@
 .resume .resume_wrapper {
   position: relative;
-  height: 55.1vh;
+  height: calc(100vh - 205px);
 }
 .resume .resume_wrapper .resume_req_form {
   position: absolute;
@@ -15,7 +15,7 @@
 }
 .resume .resume_wrapper .resume_req_form .res_res_frm {
   background-color: var(--background-modals);
-  border-radius: 23px;
+  border-radius: 30px;
   overflow: hidden;
   justify-content: space-between;
   width: 100%;
@@ -28,12 +28,13 @@
 }
 .resume .resume_wrapper .resume_req_form .res_res_frm .res_req_frm_group .res_req_input {
   all: unset;
-  padding: 10px 10px 10px 20px;
+  padding: 20px 20px 20px 30px;
   width: 350px;
   color: var(--text-color);
+  font-size: 1.1rem;
 }
 .resume .resume_wrapper .resume_req_form .res_res_frm .res_req_btn {
-  padding: 10px 20px;
+  padding: 20px 20px;
   background-color: #2ac6ff;
   color: #fff;
   font-size: 16px;

@@ -1,9 +1,7 @@
 import express from 'express'
 
 import MessageResponse from '../interfaces/MessageResponse'
-import blog from './routes/blog'
-import bloglist from './routes/bloglist'
-import newblog from './routes/newblog'
+import hire from './routes/hire'
 
 const router = express.Router()
 
@@ -13,8 +11,6 @@ router.get<{}, MessageResponse>('/', (req, res) => {
   })
 })
 
-router.use('/blog', blog)
-router.use('/bloglist', bloglist)
-router.use('/newblog', newblog)
+router.use('/', hire)
 
 export default router

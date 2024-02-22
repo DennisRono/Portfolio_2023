@@ -1,5 +1,5 @@
 .BreadCrumb {
-  padding-bottom: 20px;
+  height: 40px;
 }
 .BreadCrumb .br_crumb_text {
   color: var(--text-color);
