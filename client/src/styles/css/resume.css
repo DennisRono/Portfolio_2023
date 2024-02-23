@@ -7,6 +7,8 @@
   top: 15%;
   left: 50%;
   transform: translate(-50%, -15%);
+  width: 100%;
+  max-width: 450px !important;
 }
 .resume .resume_wrapper .resume_req_form .grad_cap_resume {
   height: 150px;
@@ -29,7 +31,7 @@
 .resume .resume_wrapper .resume_req_form .res_res_frm .res_req_frm_group .res_req_input {
   all: unset;
   padding: 20px 20px 20px 30px;
-  width: 350px;
+  width: 100%;
   color: var(--text-color);
   font-size: 1.1rem;
 }
