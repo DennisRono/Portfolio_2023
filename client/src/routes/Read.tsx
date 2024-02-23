@@ -45,13 +45,21 @@ const Read = () => {
   useEffect(() => {
     try {
       const fetchBlog = async (slug: string | undefined) => {
-        const res = await api('POST', 'blog', {
-          slug: slug,
-          file: slug + '.md',
-        })
+        const res = await api('GET', `blog/${slug}`, {})
+
         if (res.status === 200) {
-          setMeta({ status: true, meta: res.data.meta })
-          setMarkdownContent(res.data.data)
+          setMeta({
+            status: true,
+            meta: {
+              datePosted: res.data.createdAt,
+              views: res.data.views,
+              title: res.data.title,
+              tags: res.data.tags,
+              preview: res.data.preview,
+              slug: res.data.slug,
+            },
+          })
+          setMarkdownContent(res.data.content)
         } else {
           setIsError(true)
           console.error('Error fetching the blog')
@@ -91,7 +99,15 @@ const Read = () => {
               <div className="read_blog_date flex f_row f_align_center">
                 <img className="image" src={calendar} alt="" />
                 {/* <p>Sunday, April 30, 2023</p> */}
-                <p>{meta.status ? meta.meta.datePosted : ''}</p>
+                <p>
+                  {meta.status
+                    ? new Intl.DateTimeFormat('en-US', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                      }).format(new Date(meta.meta.datePosted))
+                    : ''}
+                </p>
               </div>
               <h1 className="read_blog_title">
                 {meta.status ? meta.meta.title : ''}

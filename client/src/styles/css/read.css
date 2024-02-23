@@ -1,5 +1,5 @@
 .read {
-  min-height: 50vh;
+  min-height: calc(100vh - 205px);
 }
 .read .read_error {
   padding-top: 4rem;

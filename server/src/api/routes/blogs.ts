@@ -41,4 +41,20 @@ router.get('/bloglist', async (req: Request, res: Response) => {
   }
 })
 
+router.get('/blog/:slug', async (req: Request, res: Response) => {
+  try {
+    const { slug } = req.params
+    console.log(slug)
+
+    const blog = await Blogs.findOne({ slug: slug })
+    if (!blog) {
+      res.status(404).json({ message: 'Blog not Found!' })
+    } else {
+      res.status(200).json(blog)
+    }
+  } catch (error) {
+    res.status(500).json({ message: 'Something Wrong Happened!' })
+  }
+})
+
 export default router
