@@ -13,6 +13,7 @@ import api from '../api/axios'
 
 interface BlogTypes {
   title: string
+  preview: string
   tags: Array<string>
   content: string
 }
@@ -21,6 +22,7 @@ const NewBlog = () => {
   //const preview = ``
   const [blog, setBlog] = useState<BlogTypes>({
     title: '',
+    preview: '',
     tags: [],
     content: '',
   })
@@ -100,6 +102,20 @@ const NewBlog = () => {
                   </div>
                 </div>
                 <div className="newblog_form_group">
+                  <textarea
+                    className="formgroup_input"
+                    placeholder="blog preview..."
+                    value={blog.preview}
+                    onChange={(event) =>
+                      setBlog(() => ({
+                        ...blog,
+                        preview: event.target.value,
+                      }))
+                    }
+                    style={{ maxHeight: '100px', minHeight: '100px' }}
+                  />
+                </div>
+                <div className="newblog_form_group">
                   <label htmlFor="tags">
                     write your blog in markdown format
                   </label>
@@ -128,6 +144,7 @@ const NewBlog = () => {
             <ReactMarkdown
               rehypePlugins={[rehypeRaw]}
               remarkPlugins={[remarkGfm]}
+              className="nwblg_preview_content"
               components={{
                 code({ node, inline, className, children, ...props }) {
                   const match = /language-(\w+)/.exec(className || '')
