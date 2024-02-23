@@ -18,8 +18,9 @@ router.post<{}>('/newblog', async (req: Request, res: Response) => {
       views: 0,
     })
     await newHire.save()
+    res.status(200).json({ message: 'blog saved successfully' })
   } catch (err: any) {
-    console.log(err)
+    res.status(500).json({ message: 'blog saved successfully', stack: err })
   }
 })
 

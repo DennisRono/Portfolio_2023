@@ -10,6 +10,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import spinner from '../utils/spinner'
 import api from '../api/axios'
+import { toast } from 'react-toastify'
 
 interface BlogTypes {
   title: string
@@ -27,6 +28,7 @@ const NewBlog = () => {
     content: '',
   })
   const [preview, setPreview] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleTagInput = (event: any) => {
     const inputValue = event.target.value
@@ -50,13 +52,31 @@ const NewBlog = () => {
     }))
   }
 
+  const isInputsValid = (data: BlogTypes): boolean => {
+    if (
+      data.title.trim() === '' ||
+      data.preview.trim() === '' ||
+      data.content.trim() === ''
+    ) {
+      toast('Check your inputs and retry!', {
+        type: 'error',
+      })
+      return false
+    }
+
+    return true
+  }
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
-    const res = await api('POST', 'newblog', { data: blog })
-    if (res.status === 200) {
-      console.log('Posted new blog successfully')
-    } else {
-      console.log('Error posting blog')
+    if (isInputsValid(blog)) {
+      setLoading(true)
+      const res = await api('POST', 'newblog', { data: blog })
+      setLoading(false)
+      if (res.status === 200) {
+        toast('Posted new blog successfully', { type: 'success' })
+      } else {
+        toast('Error Posting Blog! Retry', { type: 'error' })
+      }
     }
   }
   return (
@@ -133,7 +153,7 @@ const NewBlog = () => {
                     </p>
                   </div>
                   <button type="submit" className="btn nwblg_btn">
-                    post
+                    {loading ? <div className="dot-flashing"></div> : 'post'}
                   </button>
                 </div>
               </form>

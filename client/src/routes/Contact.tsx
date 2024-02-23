@@ -239,7 +239,11 @@ const Contact: React.FC = () => {
                         </div>
                         <div className="row-wrap">
                           <div id="filePush" className="button">
-                            {uploading ? 'uploading...' : 'upload'}
+                            {uploading ? (
+                              <div className="dot-flashing"></div>
+                            ) : (
+                              'upload'
+                            )}
                           </div>
                         </div>
                       </label>
