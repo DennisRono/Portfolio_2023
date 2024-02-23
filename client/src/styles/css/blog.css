@@ -1,3 +1,6 @@
+.blog {
+  min-height: calc(100vh - 205px);
+}
 .blog .blogTop {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--text-color);

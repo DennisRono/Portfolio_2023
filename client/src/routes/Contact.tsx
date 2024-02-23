@@ -13,6 +13,7 @@ import Envelop from '../assets/images/envelope_notif.png'
 import { AxiosResponse } from 'axios'
 import api from '../api/axios'
 import ImageUpload from '../utils/ImageUpload'
+import { toast } from 'react-toastify'
 
 interface ContactFormData {
   name: string
@@ -21,11 +22,6 @@ interface ContactFormData {
   website: string
   brief: string
   assets: any[]
-}
-
-interface FormResponse {
-  message: string
-  type: string
 }
 
 const Contact: React.FC = () => {
@@ -38,45 +34,39 @@ const Contact: React.FC = () => {
     assets: [],
   })
   const [uploading, setUploading] = useState(false)
-
-  const [response, setResponse] = useState<FormResponse>({
-    message: '',
-    type: '',
-  })
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
+      setLoading(true)
       const res: AxiosResponse = await api('POST', 'contact', data)
-      setResponse(res.data)
-      setData({
-        name: '',
-        email: '',
-        phone: '',
-        website: '',
-        brief: '',
-        assets: [],
-      })
-      getFile(true)
-      setTimeout(() => {
-        setResponse({ message: '', type: '' })
-      }, 5000)
+      setLoading(false)
+      if (res.status === 200) {
+        toast("Thank you for contacting! i'll get back to you", {
+          type: 'success',
+        })
+        setData({
+          name: '',
+          email: '',
+          phone: '',
+          website: '',
+          brief: '',
+          assets: [],
+        })
+        getFile(true)
+      } else {
+        toast('there was an error processing your request! Please retry!', {
+          type: 'error',
+        })
+      }
     } catch (error: any) {
-      setResponse({ type: 'error', message: 'Something Wrong Happened' })
+      toast('Something wrong happened!', {
+        type: 'error',
+      })
     }
   }
 
-  const [btntxt, setBtntxt] = useState<string>('submit')
-
-  const handleBtn = () => {
-    setBtntxt('sending...')
-    const btninterval = setInterval(() => {
-      setBtntxt('submit')
-    }, 1000)
-    if (response.message !== '') {
-      clearInterval(btninterval)
-    }
-  }
   const getFile = (c: boolean): void => {
     const files: FileList | null | undefined =
       document.querySelector<HTMLInputElement>('.file-field')?.files
@@ -119,8 +109,6 @@ const Contact: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.assets.length])
 
-  console.log(data)
-
   return (
     <Fragment>
       <Helmet>
@@ -136,17 +124,6 @@ const Contact: React.FC = () => {
         <section className="contact-page flex f_row">
           <div className="contact-page-wrapper">
             <div className="contFormSec">
-              {response.message !== '' ? (
-                <p
-                  className={
-                    response.type === 'success'
-                      ? 'formNotifySucc'
-                      : 'formNotify'
-                  }
-                >
-                  {response.message}
-                </p>
-              ) : null}
               <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <h3>1. Tell me more about yourself</h3>
                 <div className="cont-group">
@@ -282,10 +259,7 @@ const Contact: React.FC = () => {
                 </div>
                 <input
                   type="submit"
-                  value={btntxt}
-                  onClick={() => {
-                    handleBtn()
-                  }}
+                  value={loading ? 'sending...' : 'contact'}
                   name="contact-page"
                   className="contact-page-btn"
                 />
