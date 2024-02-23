@@ -101,6 +101,10 @@
       .nwblg_preview_content {
         color: var(--text-color);
         margin-bottom: 20px;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
       }
     }
   }

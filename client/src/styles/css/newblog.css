@@ -93,4 +93,9 @@
 .newblog .newblog_wrapper .newblog_preview .nwblg_preview_content {
   color: var(--text-color);
   margin-bottom: 20px;
+}
+.newblog .newblog_wrapper .newblog_preview .nwblg_preview_content img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=newblog.css.map */
