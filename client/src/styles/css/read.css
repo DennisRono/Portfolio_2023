@@ -171,6 +171,14 @@
 .read .read_wrapper .read_blog_body .r_blg_body_right::-webkit-scrollbar-track {
   background-color: transparent;
 }
+.read .read_wrapper .read_blog_body .r_blg_body_right .r_blg_body__content {
+  color: var(--text-color);
+}
+.read .read_wrapper .read_blog_body .r_blg_body_right .r_blg_body__content img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .read .read_wrapper .read_blog_body .r_blg_body_right .r_blg_body_comments {
   width: 99%;
 }

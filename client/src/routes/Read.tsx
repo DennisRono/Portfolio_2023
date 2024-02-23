@@ -168,6 +168,7 @@ const Read = () => {
                 <ReactMarkdown
                   rehypePlugins={[rehypeRaw]}
                   remarkPlugins={[remarkGfm]}
+                  className="r_blg_body__content"
                   components={{
                     code({ node, inline, className, children, ...props }) {
                       const match = /language-(\w+)/.exec(className || '')
