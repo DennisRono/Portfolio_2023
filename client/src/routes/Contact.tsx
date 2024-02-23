@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import '../styles/css/contact.css'
 import Header from '../components/Header'
 import BreadCrumb from '../components/BreadCrumb'
@@ -10,11 +10,9 @@ import { ReactComponent as Github } from '../assets/svg/github.svg'
 import { ReactComponent as Facebook } from '../assets/svg/facebook.svg'
 import { ReactComponent as LinkedIn } from '../assets/svg/linkedin.svg'
 import Envelop from '../assets/images/envelope_notif.png'
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
-
-interface FormDataAssets {
-  [key: string]: File
-}
+import { AxiosResponse } from 'axios'
+import api from '../api/axios'
+import ImageUpload from '../utils/ImageUpload'
 
 interface ContactFormData {
   name: string
@@ -22,7 +20,7 @@ interface ContactFormData {
   phone: string
   website: string
   brief: string
-  assets: FormDataAssets | null
+  assets: any[]
 }
 
 interface FormResponse {
@@ -37,8 +35,9 @@ const Contact: React.FC = () => {
     phone: '',
     website: '',
     brief: '',
-    assets: null,
+    assets: [],
   })
+  const [uploading, setUploading] = useState(false)
 
   const [response, setResponse] = useState<FormResponse>({
     message: '',
@@ -47,30 +46,8 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData()
-    if (data.assets) {
-      Object.values(data.assets).forEach((file) => {
-        formData.append('assets', file)
-      })
-    }
-    for (const key in data) {
-      if (data.hasOwnProperty(key)) {
-        const value = data[key as keyof ContactFormData]
-        if (value !== null && typeof value !== 'object') {
-          formData.append(key, value)
-        }
-      }
-    }
     try {
-      let config: AxiosRequestConfig = {
-        method: 'post',
-        url: 'https://api.denniskibet.com/den/contact',
-        headers: {
-          Authorization: 'Bearer dfghjksdbhjdsfskjfb',
-        },
-        data: formData,
-      }
-      const res: AxiosResponse = await axios(config)
+      const res: AxiosResponse = await api('POST', 'contact', data)
       setResponse(res.data)
       setData({
         name: '',
@@ -78,7 +55,7 @@ const Contact: React.FC = () => {
         phone: '',
         website: '',
         brief: '',
-        assets: null,
+        assets: [],
       })
       getFile(true)
       setTimeout(() => {
@@ -126,6 +103,23 @@ const Contact: React.FC = () => {
       label.innerHTML = finlabel
     }
   }
+
+  useEffect(() => {
+    const uploadfile = async () => {
+      setUploading(true)
+      const paths: any[] = []
+      for (let i = 0; i < data.assets.length; i++) {
+        const live_profile_url = await ImageUpload(data.assets[i])
+        if (live_profile_url) paths.push(live_profile_url)
+      }
+      setData({ ...data, assets: paths })
+      setUploading(false)
+    }
+    uploadfile()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.assets.length])
+
+  console.log(data)
 
   return (
     <Fragment>
@@ -268,7 +262,7 @@ const Contact: React.FC = () => {
                         </div>
                         <div className="row-wrap">
                           <div id="filePush" className="button">
-                            upload
+                            {uploading ? 'uploading...' : 'upload'}
                           </div>
                         </div>
                       </label>
