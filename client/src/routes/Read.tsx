@@ -76,7 +76,7 @@ const Read = () => {
     <Fragment>
       {' '}
       <Helmet>
-        <title>{slug ? slug : 'Blog'} | Dennis Kibet</title>
+        <title>{meta ? meta.meta.title : 'Blog'} | Dennis Kibet</title>
         <link
           rel="canonical"
           href={window.location.pathname + window.location.search}
