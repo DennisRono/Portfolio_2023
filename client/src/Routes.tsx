@@ -13,6 +13,7 @@ import Contact from './routes/Contact'
 import Read from './routes/Read'
 import Resume from './routes/Resume'
 import NewBlog from './routes/NewBlog'
+import NotFound from './routes/NotFound'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +45,7 @@ const router = createBrowserRouter(
         element={<Read />}
         errorElement={<ErrorBoundary />}
       />
+      <Route path="*" element={<NotFound />} errorElement={<ErrorBoundary />} />
     </>
   )
 )
