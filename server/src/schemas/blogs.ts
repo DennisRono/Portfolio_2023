@@ -16,6 +16,10 @@ const BlogsSchema = new Schema(
       required: true,
       unique: true,
     },
+    preview: {
+      type: String,
+      required: [true, 'Title is required'],
+    },
     content: {
       type: String,
       required: [true, 'Blog Content is required'],
