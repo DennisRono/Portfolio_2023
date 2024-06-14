@@ -8,7 +8,7 @@ interface RBlogs {
   views: number
   title: string
   tags: Array<string>
-  preview: string
+  summary: string
   slug: string
 }
 
@@ -75,7 +75,7 @@ const BlogList = (props: { count: string }) => {
                         )
                       })}
                     </div>
-                    <p className="blg_bl_prev_par">{i.preview}</p>
+                    <p className="blg_bl_prev_par">{i.summary}</p>
                   </Link>
                 </div>
               )
