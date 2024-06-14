@@ -6,8 +6,10 @@ import BreadCrumb from '../components/BreadCrumb'
 import Footer from '../components/Footer'
 import Image from '../components/Image'
 
+//const baseURL =
+// 'https://res.cloudinary.com/dkazrhnxq/image/upload/v1718384693/kibet/'
 const baseURL =
-  'https://res.cloudinary.com/dkazrhnxq/image/upload/v1718384693/kibet/'
+  'https://res.cloudinary.com/dkazrhnxq/image/upload/f_auto,q_auto/v1/kibet/'
 
 const array = [
   'tqtvve1yabvr7sn6e4ij',
@@ -88,10 +90,13 @@ const Gallery: React.FC = () => {
         <div className="gallery">
           {Array.isArray(imageNames) &&
             imageNames.map((image, index) => {
+              const rand = Math.random()
               const randomClass =
-                Math.random() > 0.5
+                rand > 0.3 && rand < 0.6
                   ? 'gallery__item--vert'
-                  : 'gallery__item--hor'
+                  : rand < 0.3
+                  ? 'gallery__item--hor'
+                  : ''
               return (
                 <Image
                   key={index}
