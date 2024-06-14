@@ -22,9 +22,9 @@ const BlogList = (props: { count: string }) => {
     try {
       const fetchBlogs = async (no: number) => {
         const res = await api('GET', 'blog/all', { no: no })
-        console.log(res.data)
+        console.log(res)
         if (res.status === 200) {
-          setBlogs({ status: 'success', data: res.data.blogs })
+          setBlogs({ status: 'success', data: res.data.data })
         } else {
           setBlogs({ status: 'error', data: [] })
         }
@@ -32,6 +32,8 @@ const BlogList = (props: { count: string }) => {
       fetchBlogs(parseInt(props.count))
     } catch (error) {}
   }, [props.count])
+  console.log(blogs)
+
   return (
     <Fragment>
       <div className="bloglist">
@@ -41,6 +43,7 @@ const BlogList = (props: { count: string }) => {
           ) : blogs.status === 'error' ? (
             <p>Could not fetch the blogs</p>
           ) : (
+            Array.isArray(blogs.data) &&
             blogs.data.map((i) => {
               return (
                 <div
@@ -67,13 +70,14 @@ const BlogList = (props: { count: string }) => {
                     </div>
                     <h1 className="bl_title">{i.title}</h1>
                     <div className="bl_blg_tags flex f_row f_align_center">
-                      {i.tags.map((j) => {
-                        return (
-                          <span className="bl_tgs" key={j}>
-                            {j}
-                          </span>
-                        )
-                      })}
+                      {Array.isArray(i.tags) &&
+                        i.tags.map((j) => {
+                          return (
+                            <span className="bl_tgs" key={j}>
+                              {j}
+                            </span>
+                          )
+                        })}
                     </div>
                     <p className="blg_bl_prev_par">{i.summary}</p>
                   </Link>
