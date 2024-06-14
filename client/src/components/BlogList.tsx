@@ -21,7 +21,7 @@ const BlogList = (props: { count: string }) => {
   useEffect(() => {
     try {
       const fetchBlogs = async (no: number) => {
-        const res = await api('GET', 'bloglist', { no: no })
+        const res = await api('GET', 'blog/all', { no: no })
         console.log(res.data)
         if (res.status === 200) {
           setBlogs({ status: 'success', data: res.data.blogs })
