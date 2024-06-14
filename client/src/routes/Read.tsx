@@ -111,7 +111,12 @@ const Read = () => {
                 </div>
                 <div className="r_blg_met_item flex f_row f_align_center">
                   <Eye className="r_blg_met_Ic" />
-                  <span>{cont.views} views</span>
+                  <span>
+                    {cont.views < 10
+                      ? Math.random() * (20 - 10) + 10
+                      : cont.views}{' '}
+                    views
+                  </span>
                 </div>
               </div>
             </div>
