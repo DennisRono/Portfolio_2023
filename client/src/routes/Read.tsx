@@ -59,6 +59,7 @@ const Read = () => {
         console.log(res)
         if (res.status === 200) {
           setCont(res.data.data)
+          await api('PUT', `blog/view/${slug}`, {})
         } else {
           setIsError(true)
           console.error('Error fetching the blog')
