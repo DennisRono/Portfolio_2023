@@ -17,49 +17,48 @@ import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import spinner from '../utils/spinner'
-interface RBlogs {
-  datePosted: string
-  views: number
-  title: string
-  tags: Array<string>
-  preview: string
+interface BlgCont {
+  content: string
+  assets: []
+  createdAt: string
+  length: number
   slug: string
+  summary: string
+  title: string
+  toc: []
+  updatedAt: string
+  views: number
+  _id: string
+  author: string
 }
 
 const Read = () => {
   const { slug } = useParams()
   const [isError, setIsError] = useState(false)
-  const [meta, setMeta] = useState<{ status: boolean; meta: RBlogs }>({
-    status: false,
-    meta: {
-      datePosted: '',
-      views: 0,
-      title: '',
-      tags: [],
-      preview: '',
-      slug: '',
-    },
+  const [isLoading, setIsLoading] = useState(false)
+  const [cont, setCont] = useState<BlgCont>({
+    content: '',
+    assets: [],
+    createdAt: '',
+    length: 0,
+    slug: '',
+    summary: '',
+    title: '',
+    toc: [],
+    updatedAt: '',
+    views: Math.random() * (1000 - 100) + 100,
+    _id: '',
+    author: 'Dennis Kibet',
   })
-  const [markdownContent, setMarkdownContent] = useState<string>('')
   // fetch blog from database
   useEffect(() => {
     try {
       const fetchBlog = async (slug: string | undefined) => {
-        const res = await api('GET', `blog/${slug}`, {})
-
+        setIsLoading(true)
+        const res = await api('GET', `blog/get/${slug}`, {})
+        console.log(res)
         if (res.status === 200) {
-          setMeta({
-            status: true,
-            meta: {
-              datePosted: res.data.createdAt,
-              views: res.data.views,
-              title: res.data.title,
-              tags: res.data.tags,
-              preview: res.data.preview,
-              slug: res.data.slug,
-            },
-          })
-          setMarkdownContent(res.data.content)
+          setCont(res.data.data)
         } else {
           setIsError(true)
           console.error('Error fetching the blog')
@@ -68,15 +67,17 @@ const Read = () => {
       fetchBlog(slug)
     } catch (error) {
       console.error('Error fetching the blog:', error)
+    } finally {
+      setIsLoading(false)
     }
   }, [slug])
-  console.log(meta)
+  console.log(cont)
 
   return (
     <Fragment>
       {' '}
       <Helmet>
-        <title>{meta ? meta.meta.title : 'Blog'} | Dennis Kibet</title>
+        <title>{cont.title} | Dennis Kibet</title>
         <link
           rel="canonical"
           href={window.location.pathname + window.location.search}
@@ -99,27 +100,17 @@ const Read = () => {
               <div className="read_blog_date flex f_row f_align_center">
                 <img className="image" src={calendar} alt="" />
                 {/* <p>Sunday, April 30, 2023</p> */}
-                <p>
-                  {meta.status
-                    ? new Intl.DateTimeFormat('en-US', {
-                        day: 'numeric',
-                        month: 'short',
-                        year: 'numeric',
-                      }).format(new Date(meta.meta.datePosted))
-                    : ''}
-                </p>
+                <p>{cont.updatedAt}</p>
               </div>
-              <h1 className="read_blog_title">
-                {meta.status ? meta.meta.title : ''}
-              </h1>
+              <h1 className="read_blog_title">{cont.title}</h1>
               <div className="r_blg_meta flex f_row f_align_center">
                 <div className="r_blg_met_item flex f_row f_align_center">
                   <Clock className="r_blg_met_Ic" />
-                  <span>6 min read</span>
+                  <span>{cont.length} min read</span>
                 </div>
                 <div className="r_blg_met_item flex f_row f_align_center">
                   <Eye className="r_blg_met_Ic" />
-                  <span>{meta.status ? meta.meta.views : ''} views</span>
+                  <span>{cont.views} views</span>
                 </div>
               </div>
             </div>
@@ -131,15 +122,15 @@ const Read = () => {
                       <img className="image" src={ProfileImage} alt="" />
                     </div>
                     <div className="blg_author_textuals">
-                      <h2>Dennis Kibet</h2>
+                      <h2>{cont.author ? cont.author : 'Dennis Kibet'}</h2>
                     </div>
                   </div>
                   <div className="blog_tags flex f_row f_align_center">
-                    {meta.status
+                    {/* {meta.status && Array.isArray(meta.meta.tags)
                       ? meta.meta.tags.map((i) => {
                           return <span className="tag_text">{i}</span>
                         })
-                      : ''}
+                      : ''} */}
                   </div>
                   <div className="read_blg_similar_blogs">
                     <h3 className="smlar_blg_title">Similar Blogs</h3>
@@ -188,7 +179,7 @@ const Read = () => {
                     },
                   }}
                 >
-                  {markdownContent === '' ? spinner : markdownContent}
+                  {isLoading ? spinner : cont.content}
                 </ReactMarkdown>
                 <div className="r_blg_body_comments">
                   <Comments />
