@@ -41,6 +41,11 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className="n_link_item">
+                    <Link className="n_lnk_redirect p_h_20" to="/gallery">
+                      Gallery
+                    </Link>
+                  </li>
+                  <li className="n_link_item">
                     <Link className="n_lnk_redirect p_h_20" to="/contact-me">
                       Contact
                     </Link>

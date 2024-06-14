@@ -14,6 +14,7 @@ import Read from './routes/Read'
 import Resume from './routes/Resume'
 import NewBlog from './routes/NewBlog'
 import NotFound from './routes/NotFound'
+import Gallery from './routes/Gallery'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +39,11 @@ const router = createBrowserRouter(
       <Route
         path="/contact-me"
         element={<Contact />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/gallery"
+        element={<Gallery />}
         errorElement={<ErrorBoundary />}
       />
       <Route
