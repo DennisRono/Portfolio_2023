@@ -41,7 +41,7 @@ const router = createBrowserRouter(
         errorElement={<ErrorBoundary />}
       />
       <Route
-        path="/blog/:slug"
+        path="/read/:slug"
         element={<Read />}
         errorElement={<ErrorBoundary />}
       />

@@ -56,7 +56,7 @@ const BlogList = (props: { count: string }) => {
                     })
                   }}
                 >
-                  <Link to={`/blog/${i.slug}`} className="bl_cont_link">
+                  <Link to={`/read/${i.slug}`} className="bl_cont_link">
                     <div className="bl_blg_meta flex f_row f_align_center">
                       <span className="bl_date">
                         {new Intl.DateTimeFormat('en-US', {
