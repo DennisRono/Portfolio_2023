@@ -1,5 +1,4 @@
 import React from 'react'
-import placeholderImage from '../assets/images/placeholder.png'
 import useImageLoader from '../utils/useImageLoader'
 
 type ImageProps = {
