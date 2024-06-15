@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet'
 import Header from '../components/Header'
 import BreadCrumb from '../components/BreadCrumb'
 import Footer from '../components/Footer'
-import Image from '../components/Image'
 
 //const baseURL =
 // 'https://res.cloudinary.com/dkazrhnxq/image/upload/v1718384693/kibet/'
@@ -92,18 +91,15 @@ const Gallery: React.FC = () => {
             imageNames.map((image, index) => {
               const rand = Math.random()
               const randomClass =
-                rand > 0.3 && rand < 0.6
+                rand > 0.2 && rand < 0.4
                   ? 'gallery__item--vert'
                   : rand < 0.3
                   ? 'gallery__item--hor'
                   : ''
               return (
-                <Image
-                  key={index}
-                  src={`${baseURL}${image}.jpg`}
-                  alt={`Image ${index + 1}`}
-                  className={`gallery__item ${randomClass}`}
-                />
+                <div className={`gallery__item ${randomClass}`}>
+                  <img key={index} src={`${baseURL}${image}.jpg`} alt="" />
+                </div>
               )
             })}
         </div>
