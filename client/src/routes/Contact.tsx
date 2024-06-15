@@ -16,21 +16,23 @@ import ImageUpload from '../utils/ImageUpload'
 import { toast } from 'react-toastify'
 
 interface ContactFormData {
-  name: string
+  full_name: string
   email: string
   phone: string
   website: string
-  brief: string
+  subject: string
+  message: string
   assets: any[]
 }
 
 const Contact: React.FC = () => {
   const [data, setData] = useState<ContactFormData>({
-    name: '',
+    full_name: '',
     email: '',
     phone: '',
     website: '',
-    brief: '',
+    subject: '',
+    message: '',
     assets: [],
   })
   const [uploading, setUploading] = useState(false)
@@ -47,11 +49,12 @@ const Contact: React.FC = () => {
           type: 'success',
         })
         setData({
-          name: '',
+          full_name: '',
           email: '',
           phone: '',
           website: '',
-          brief: '',
+          subject: '',
+          message: '',
           assets: [],
         })
         getFile(true)
@@ -134,7 +137,7 @@ const Contact: React.FC = () => {
                       type="text"
                       className="inputText"
                       name="name"
-                      value={data.name}
+                      value={data.full_name}
                       onChange={(e) => {
                         setData({ ...data, [e.target.name]: e.target.value })
                       }}
@@ -209,11 +212,29 @@ const Contact: React.FC = () => {
                 <div className="cont-group">
                   <div className="user-input-wrp">
                     <br />
+                    <input
+                      id="id-input"
+                      type="text"
+                      className="inputText"
+                      name="subject"
+                      value={data.subject}
+                      onChange={(e) => {
+                        setData({ ...data, [e.target.name]: e.target.value })
+                      }}
+                    />
+                    <span className="floating-label">
+                      Subject <span style={{ color: 'red' }}>*</span>
+                    </span>
+                  </div>
+                  <span id="id-err"></span>
+                  <br />
+                  <div className="user-input-wrp">
+                    <br />
                     <textarea
                       id="id-input"
                       className="inputText"
                       name="brief"
-                      value={data.brief}
+                      value={data.message}
                       onChange={(e) => {
                         setData({ ...data, [e.target.name]: e.target.value })
                       }}
