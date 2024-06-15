@@ -56,13 +56,13 @@ const About = () => {
                   &nbsp;&nbsp; <span className="secCounter"> .01</span>{' '}
                 </h2>
                 <p className="abt_back_texts">
-                  Hello, I am Dennis. I am currently a student at Machakos
-                  University Kenya. I love building things for the internet. My
-                  native home place is Eldoret Kenya. My intrest in computers
-                  started back when I was in High School when I did a science
-                  fair project on web develpment. As simple as the project was
-                  it taught me alot on how the internet works and moreover gave
-                  me a little Experience on HTML & CSS.
+                  Hello, I am Dennis. I am currently a student at Moringa School
+                  Kenya, studying Software Engineering. I love building things
+                  for the internet. My native home place is Eldoret Kenya. My
+                  intrest in computers started back when I was in High School
+                  when I did a science fair project on web develpment. As simple
+                  as the project was it taught me alot on how the internet works
+                  and moreover gave me a little Experience on HTML & CSS.
                   <br />
                   <br />
                   currently i focus on finding reliable solutions for software
@@ -154,7 +154,7 @@ const About = () => {
             <div className="abt_visualizations p_v_40">
               <div className="abt_vis_wrapper flex f_row f_align_center">
                 <div className="abt_vis_left flex f_row f_align_center">
-                  <h3>3+</h3>
+                  <h3>4+</h3>
                   <div className="abt_vis_divider">
                     <p>Years of</p>
                     <p>Experience</p>
@@ -190,7 +190,9 @@ const About = () => {
                 </div>
               </div>
               <div className="exp">
-                <h2 className="eOneTitle">Alphax College, Eldoret</h2>
+                <h2 className="eOneTitle">
+                  Alphax College (Web Development), Eldoret
+                </h2>
                 <div className="eOneTexts">
                   <p>
                     here i took a practical course on web development where i
@@ -201,13 +203,20 @@ const About = () => {
                 </div>
               </div>
               <div className="exp">
-                <h2 className="eOneTitle">Machakos University, Machakos</h2>
+                <h2 className="eOneTitle">
+                  Machakos University (Computer Science), Machakos
+                </h2>
                 <div className="eOneTexts">
                   <p>
-                    I am currently at Machakos University persuing a course in
-                    computer science. So far so good here
+                    At Machakos University, I gained a deep understanding of the
+                    theoretical foundations of computing technologies. I had the
+                    opportunity to collaborate with many peers on various school
+                    projects over the four years. This experience was incredibly
+                    rewarding, allowing me to forge lifelong connections and
+                    acquire a range of skills that enhanced my personal
+                    development and advanced my career.
                   </p>
-                  <span className="eduration">2020 Sept - current</span>
+                  <span className="eduration">2020 Sept - 2024 April</span>
                 </div>
               </div>
               <div className="exp">
@@ -222,6 +231,18 @@ const About = () => {
                     organizational proficiency and innovation.
                   </p>
                   <span className="eduration">2023 May - 2023 August</span>
+                </div>
+              </div>
+              <div className="exp">
+                <h2 className="eOneTitle">
+                  Moringa School (Software Engineering), Nairobi
+                </h2>
+                <div className="eOneTexts">
+                  <p>
+                    I am currently at Moringa School persuing software
+                    engineering. So far so good here.
+                  </p>
+                  <span className="eduration">2024 June - 2024 December</span>
                 </div>
               </div>
             </div>
