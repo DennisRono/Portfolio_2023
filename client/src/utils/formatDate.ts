@@ -1,6 +1,9 @@
-export function formatDate(dateString: string) {
+export function formatDate(dateString: string): string {
   let date = new Date(dateString)
-  function addOrdinalSuffix(day: number) {
+  if (isNaN(date.getTime())) {
+    return dateString
+  }
+  function addOrdinalSuffix(day: number): string {
     if (day > 3 && day < 21) return day + 'th'
     switch (day % 10) {
       case 1:
@@ -13,7 +16,7 @@ export function formatDate(dateString: string) {
         return day + 'th'
     }
   }
-  let options: any = {
+  let options: Intl.DateTimeFormatOptions = {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -26,5 +29,6 @@ export function formatDate(dateString: string) {
   let day = date.getDate()
   let ordinalDay = addOrdinalSuffix(day)
   formattedDate = formattedDate.replace(/\d+/, ordinalDay)
+
   return formattedDate
 }

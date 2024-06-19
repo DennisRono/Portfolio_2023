@@ -73,10 +73,12 @@ const Read = () => {
       fetchBlog(slug)
     } catch (error) {
       console.error('Error fetching the blog:', error)
+      toast('could not fetch the blog', { type: 'error' })
     } finally {
       setIsLoading(false)
     }
-  }, [slug])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     try {
@@ -119,7 +121,11 @@ const Read = () => {
               <div className="read_blog_date flex f_row f_align_center">
                 <img className="image" src={calendar} alt="" />
                 {/* <p>Sunday, April 30, 2023</p> */}
-                <p>{formatDate(cont.updatedAt)}</p>
+                <p>
+                  {cont.updatedAt !== ''
+                    ? formatDate(cont.updatedAt)
+                    : cont.updatedAt}
+                </p>
               </div>
               <h1 className="read_blog_title">{cont.title}</h1>
               <div className="r_blg_meta flex f_row f_align_center">
