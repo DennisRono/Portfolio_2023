@@ -59,7 +59,7 @@ const Read = () => {
   // fetch blog from database
   useEffect(() => {
     try {
-      const fetchBlog = async (slug: string | undefined) => {
+      const fetchBlog = async (slug: string | undefined, retries = 3) => {
         setIsLoading(true)
         const res = await api('GET', `blog/get/${slug}`, {})
         console.log(res)
@@ -70,8 +70,14 @@ const Read = () => {
           await api('PUT', `blog/view/${slug}`, {})
         } else {
           if (cont.title !== '') {
-            setIsError(true)
-            console.error('Error fetching the blog')
+            if (retries > 0) {
+              if (slug && cont.title === '') {
+                fetchBlog(slug, retries - 1)
+              }
+            } else {
+              setIsError(true)
+              console.error('Error fetching the blog')
+            }
           }
         }
       }
