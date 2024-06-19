@@ -70,7 +70,9 @@ const Read = () => {
           console.error('Error fetching the blog')
         }
       }
-      fetchBlog(slug)
+      if (slug && slug !== '') {
+        fetchBlog(slug)
+      }
     } catch (error) {
       console.error('Error fetching the blog:', error)
       toast('could not fetch the blog', { type: 'error' })
