@@ -17,6 +17,7 @@ import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import spinner from '../utils/spinner'
+import { toast } from 'react-toastify'
 interface BlgCont {
   content: string
   assets: []
@@ -52,6 +53,7 @@ const Read = () => {
     author: 'Dennis Kibet',
     tags: [],
   })
+  const [allblogs, setAllBlogs] = useState([])
   // fetch blog from database
   useEffect(() => {
     try {
@@ -74,7 +76,20 @@ const Read = () => {
       setIsLoading(false)
     }
   }, [slug])
-  console.log(cont)
+
+  useEffect(() => {
+    try {
+      const fetchBlogs = async (no: number) => {
+        const res = await api('GET', 'blog/all', { no: no })
+        if (res.status === 200) {
+          setAllBlogs(res.data.data)
+        } else {
+          toast('could not fetch similar blogs', { type: 'error' })
+        }
+      }
+      fetchBlogs(4)
+    } catch (error) {}
+  }, [])
 
   return (
     <Fragment>
@@ -142,24 +157,17 @@ const Read = () => {
                   </div>
                   <div className="read_blg_similar_blogs">
                     <h3 className="smlar_blg_title">Similar Blogs</h3>
-                    <div className="smlar_blgs_t_wrapper">
-                      <Link to="/blog/" className="smlar_blgs_titles c_p">
-                        Building a Chatbot for your E-commerce Business using
-                        Django
-                      </Link>
-                    </div>
-                    <div className="smlar_blgs_t_wrapper">
-                      <Link to="/blog/" className="smlar_blgs_titles c_p">
-                        Building a Chatbot for your E-commerce Business using
-                        Django
-                      </Link>
-                    </div>
-                    <div className="smlar_blgs_t_wrapper">
-                      <Link to="/blog/" className="smlar_blgs_titles c_p">
-                        Building a Chatbot for your E-commerce Business using
-                        Django
-                      </Link>
-                    </div>
+                    {Array.isArray(allblogs) &&
+                      allblogs.map((blog: any) => (
+                        <div className="smlar_blgs_t_wrapper" key={blog._id}>
+                          <Link
+                            to={`/read/${blog.slug}`}
+                            className="smlar_blgs_titles c_p"
+                          >
+                            {blog.title}
+                          </Link>
+                        </div>
+                      ))}
                   </div>
                 </div>
               </div>
