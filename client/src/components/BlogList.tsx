@@ -20,14 +20,18 @@ const BlogList = (props: { count: string }) => {
   // fetch blogs from database
   useEffect(() => {
     try {
-      const fetchBlogs = async (no: number) => {
+      const fetchBlogs = async (no: number, retries = 3) => {
         const res = await api('GET', 'blog/all', { no: no })
         console.log(res)
         if (res.status === 200) {
           setBlogs({ status: 'success', data: res.data.data })
         } else {
           if (Array.isArray(blogs.data) && blogs.data.length === 0) {
-            setBlogs({ status: 'error', data: [] })
+            if (retries > 0) {
+              fetchBlogs(no, retries - 1)
+            } else {
+              setBlogs({ status: 'error', data: [] })
+            }
           }
         }
       }
