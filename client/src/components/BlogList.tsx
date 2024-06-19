@@ -40,7 +40,7 @@ const BlogList = (props: { count: string }) => {
       }
     } catch (error) {}
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [props.count])
+  }, [])
   console.log(blogs)
 
   return (
