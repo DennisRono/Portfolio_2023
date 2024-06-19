@@ -88,19 +88,30 @@ const Read = () => {
   }, [])
 
   useEffect(() => {
-    try {
-      const fetchBlogs = async (no: number) => {
+    const fetchBlogs = async (no: number = 4, retries = 3) => {
+      try {
         const res = await api('GET', 'blog/all', { no: no })
         if (res.status === 200) {
           setAllBlogs(res.data.data)
         } else {
-          toast('could not fetch similar blogs', { type: 'error' })
+          if (retries > 0) {
+            fetchBlogs(no, retries - 1)
+          } else {
+            toast('Could not fetch similar blogs', { type: 'error' })
+          }
+        }
+      } catch (error) {
+        if (retries > 0) {
+          fetchBlogs(no, retries - 1)
+        } else {
+          toast('Could not fetch similar blogs', { type: 'error' })
         }
       }
-      if (Array.isArray(allblogs) && allblogs.length === 0) {
-        fetchBlogs(4)
-      }
-    } catch (error) {}
+    }
+
+    if (Array.isArray(allblogs) && allblogs.length === 0) {
+      fetchBlogs(4)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
