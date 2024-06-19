@@ -19,6 +19,7 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import spinner from '../utils/spinner'
 import { toast } from 'react-toastify'
 import { formatDate } from '../utils/formatDate'
+import CodeCopyBtn from '../components/CopyCodeBtn'
 interface BlgCont {
   content: string
   assets: []
@@ -102,6 +103,13 @@ const Read = () => {
     } catch (error) {}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const Pre = ({ children }: any) => (
+    <pre className="blog-pre">
+      <CodeCopyBtn>{children}</CodeCopyBtn>
+      {children}
+    </pre>
+  )
 
   return (
     <Fragment>
@@ -195,6 +203,7 @@ const Read = () => {
                   remarkPlugins={[remarkGfm]}
                   className="r_blg_body__content"
                   components={{
+                    pre: Pre,
                     code({ node, inline, className, children, ...props }) {
                       const match = /language-(\w+)/.exec(className || '')
                       return !inline && match ? (
