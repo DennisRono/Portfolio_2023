@@ -206,6 +206,12 @@ const Read = () => {
                           <Link
                             to={`/read/${blog.slug}`}
                             className="smlar_blgs_titles c_p"
+                            onClick={() => {
+                              window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth',
+                              })
+                            }}
                           >
                             {blog.title}
                           </Link>
