@@ -18,6 +18,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import spinner from '../utils/spinner'
 import { toast } from 'react-toastify'
+import { formatDate } from '../utils/formatDate'
 interface BlgCont {
   content: string
   assets: []
@@ -118,7 +119,7 @@ const Read = () => {
               <div className="read_blog_date flex f_row f_align_center">
                 <img className="image" src={calendar} alt="" />
                 {/* <p>Sunday, April 30, 2023</p> */}
-                <p>{cont.updatedAt}</p>
+                <p>{formatDate(cont.updatedAt)}</p>
               </div>
               <h1 className="read_blog_title">{cont.title}</h1>
               <div className="r_blg_meta flex f_row f_align_center">
