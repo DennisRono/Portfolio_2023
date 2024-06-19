@@ -30,6 +30,7 @@ interface BlgCont {
   views: number
   _id: string
   author: string
+  tags: string[]
 }
 
 const Read = () => {
@@ -49,6 +50,7 @@ const Read = () => {
     views: Math.random() * (1000 - 100) + 100,
     _id: '',
     author: 'Dennis Kibet',
+    tags: [],
   })
   // fetch blog from database
   useEffect(() => {
@@ -132,11 +134,11 @@ const Read = () => {
                     </div>
                   </div>
                   <div className="blog_tags flex f_row f_align_center">
-                    {/* {meta.status && Array.isArray(meta.meta.tags)
-                      ? meta.meta.tags.map((i) => {
+                    {cont.tags && Array.isArray(cont.tags)
+                      ? cont.tags.map((i: string) => {
                           return <span className="tag_text">{i}</span>
                         })
-                      : ''} */}
+                      : ''}
                   </div>
                   <div className="read_blg_similar_blogs">
                     <h3 className="smlar_blg_title">Similar Blogs</h3>
