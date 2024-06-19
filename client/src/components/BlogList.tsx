@@ -26,7 +26,9 @@ const BlogList = (props: { count: string }) => {
         if (res.status === 200) {
           setBlogs({ status: 'success', data: res.data.data })
         } else {
-          setBlogs({ status: 'error', data: [] })
+          if (Array.isArray(blogs.data) && blogs.data.length === 0) {
+            setBlogs({ status: 'error', data: [] })
+          }
         }
       }
       if (Array.isArray(blogs.data) && blogs.data.length === 0) {
