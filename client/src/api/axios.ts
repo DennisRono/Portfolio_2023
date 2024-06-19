@@ -25,7 +25,6 @@ const api = async (
       data: data,
     }
     const res = await axios(config)
-    console.log(res)
     return res
   } catch (error: any) {
     return {

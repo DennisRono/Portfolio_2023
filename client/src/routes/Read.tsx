@@ -63,14 +63,18 @@ const Read = () => {
         const res = await api('GET', `blog/get/${slug}`, {})
         console.log(res)
         if (res.status === 200) {
-          setCont(res.data.data)
+          if (cont.title === '') {
+            setCont(res.data.data)
+          }
           await api('PUT', `blog/view/${slug}`, {})
         } else {
-          setIsError(true)
-          console.error('Error fetching the blog')
+          if (cont.title !== '') {
+            setIsError(true)
+            console.error('Error fetching the blog')
+          }
         }
       }
-      if (slug && slug !== '') {
+      if (slug && cont.title === '') {
         fetchBlog(slug)
       }
     } catch (error) {
@@ -92,8 +96,11 @@ const Read = () => {
           toast('could not fetch similar blogs', { type: 'error' })
         }
       }
-      fetchBlogs(4)
+      if (Array.isArray(allblogs) && allblogs.length === 0) {
+        fetchBlogs(4)
+      }
     } catch (error) {}
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
