@@ -25,4 +25,24 @@
 }
 .header .container .h_wrapper .h_nav_wrapper .h_actions .h_actions_theme_ic {
   fill: var(--text-color);
+}
+
+.relative {
+  position: relative;
+}
+
+.minidropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px;
+}
+.minidropdown ul {
+  margin-left: 0.6rem;
+}
+.minidropdown ul li {
+  cursor: pointer;
 }/*# sourceMappingURL=header.css.map */

@@ -34,3 +34,22 @@
     }
   }
 }
+
+.relative {
+  position: relative;
+}
+.minidropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px;
+  ul {
+    margin-left: 0.6rem;
+    li {
+      cursor: pointer;
+    }
+  }
+}
