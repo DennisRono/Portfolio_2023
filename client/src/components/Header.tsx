@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import '../styles/css/header.css'
 import Logo from '../assets/images/logo.png'
 import { Link } from 'react-router-dom'
@@ -12,6 +12,20 @@ const Header = () => {
   //theme
   const dispatch = useAppDispatch()
   const theme = useAppSelector((state) => state.theme)
+  const [miniDrop, setMiniDrop] = useState<boolean>(false)
+  const miniDropRef: any = useRef(null)
+  const handleClickOutside = (event: any) => {
+    if (miniDropRef.current && !miniDropRef.current.contains(event.target)) {
+      setMiniDrop(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
   return (
     <Fragment>
       <div className="header">
@@ -40,11 +54,11 @@ const Header = () => {
                       About
                     </Link>
                   </li>
-                  <li className="n_link_item">
+                  {/* <li className="n_link_item">
                     <Link className="n_lnk_redirect p_h_20" to="/gallery">
                       Gallery
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="n_link_item">
                     <Link className="n_lnk_redirect p_h_20" to="/contact-me">
                       Contact
@@ -68,10 +82,24 @@ const Header = () => {
                     }}
                   />
                 )}
-                <Bars
-                  className="icon h_actions_theme_ic c_p"
-                  onClick={() => {}}
-                />
+                <div className="relative">
+                  <Bars
+                    className="icon h_actions_theme_ic c_p"
+                    ref={miniDropRef}
+                    onClick={() => {
+                      setMiniDrop(!miniDrop)
+                    }}
+                  />
+                  {miniDrop && (
+                    <div className="minidropdown">
+                      <ul>
+                        <li>
+                          <a href="https://nullchemy.com">nullchemy</a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

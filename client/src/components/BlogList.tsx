@@ -75,7 +75,14 @@ const BlogList = (props: { count: string }) => {
                         }).format(new Date(i.createdAt))}
                       </span>
                       <span>.</span>
-                      <span className="bl_views">{i.views} views</span>
+                      <span className="bl_views">
+                        {Math.round(
+                          i.views < 10
+                            ? Math.random() * (20 - 10) + 10
+                            : i.views
+                        )}{' '}
+                        views
+                      </span>
                     </div>
                     <h1 className="bl_title">{i.title}</h1>
                     <div className="bl_blg_tags flex f_row f_align_center">
