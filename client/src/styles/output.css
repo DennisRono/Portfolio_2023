@@ -647,6 +647,10 @@ video {
   visibility: visible;
 }
 
+.relative {
+  position: relative;
+}
+
 .block {
   display: block;
 }
