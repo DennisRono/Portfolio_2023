@@ -21,6 +21,7 @@ import NPay from './routes/NPay'
 import NAnalytics from './routes/NAnalytics'
 import Nems from './routes/Nems'
 import WenotiFy from './routes/WenotiFy'
+import AllProjetcs from './routes/AllProjects'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -81,6 +82,11 @@ const router = createBrowserRouter(
       <Route
         path="/wenotify-kenya"
         element={<WenotiFy />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/all-projects"
+        element={<AllProjetcs />}
         errorElement={<ErrorBoundary />}
       />
       <Route path="*" element={<NotFound />} errorElement={<ErrorBoundary />} />

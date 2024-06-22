@@ -193,6 +193,14 @@ const ProjectsSlider: React.FC = () => {
             ))}
           </div>
         </div>
+        <div className="flex items-center justify-center w-full py-8">
+          <Link
+            to="/all-projects"
+            className="py-2 px-4 border border-slate-600 rounded-md"
+          >
+            All Projetcs List
+          </Link>
+        </div>
       </div>
     </Fragment>
   )
