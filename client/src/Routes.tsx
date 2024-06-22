@@ -15,6 +15,12 @@ import Resume from './routes/Resume'
 import NewBlog from './routes/NewBlog'
 import NotFound from './routes/NotFound'
 import Gallery from './routes/Gallery'
+import WeCare from './routes/WeCare'
+import MedAndGromart from './routes/MedAndGromart'
+import NPay from './routes/NPay'
+import NAnalytics from './routes/NAnalytics'
+import Nems from './routes/Nems'
+import WenotiFy from './routes/WenotiFy'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,6 +55,32 @@ const router = createBrowserRouter(
       <Route
         path="/read/:slug"
         element={<Read />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/wecare"
+        element={<WeCare />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/med-and-gromart"
+        element={<MedAndGromart />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route path="/npay" element={<NPay />} errorElement={<ErrorBoundary />} />
+      <Route
+        path="/n-analytics"
+        element={<NAnalytics />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/null-ems"
+        element={<Nems />}
+        errorElement={<ErrorBoundary />}
+      />
+      <Route
+        path="/wenotify-kenya"
+        element={<WenotiFy />}
         errorElement={<ErrorBoundary />}
       />
       <Route path="*" element={<NotFound />} errorElement={<ErrorBoundary />} />

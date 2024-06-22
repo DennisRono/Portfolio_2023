@@ -6,9 +6,10 @@ import NAnalytics from '../assets/images/n_analytics.png'
 import MedAndGromart from '../assets/images/med-and-gromart.png'
 import NPay from '../assets/images/n_pay.png'
 import Nems from '../assets/images/null_ems.png'
-import WenotiFy from '../assets/images/wenotify.png'
+import WenotiFy from '../assets/images/wenotify_login.png'
 import { Link } from 'react-router-dom'
 import LazyLoad from './LazyLoad'
+import { ReactComponent as ExternalLink } from '../assets/svg/external_link.svg'
 
 interface Slide {
   id: number
@@ -17,48 +18,58 @@ interface Slide {
   title: string
   preview: string
   slug: string
+  external_url: string
 }
 
 const slides: Slide[] = [
   {
     id: 1,
     imageUrl: WeCare,
-    stack: 'Flutter/Express.js/Redis/MongoDB',
+    stack: 'React.js/Flask/Redis/MongoDB/Electra/Bert',
     title: 'WeCare',
-    preview: '',
+    preview:
+      'WeCare is a chatbot application that is designed to help users with suicidal thoughts, and offer emotional support when in distress, it runs Two models for text generation Electra and Bert',
     slug: 'wecare',
+    external_url: 'https://wecare.nullchemy.com',
   },
   {
     id: 2,
     imageUrl: MedAndGromart,
-    stack: 'React.js/Express.js/MySQL',
+    stack: 'Next.js/MongoDb',
     title: 'Med & Gromart',
-    preview: '',
+    preview:
+      'Med & Gromart is an online marketplace for sellers and buyers to sell and buy products, it offers analytical tools and wide reach to customers',
     slug: 'med-and-gromart',
+    external_url: 'https://shop.nullchemy.com',
   },
   {
     id: 3,
     imageUrl: NPay,
     stack: 'Flutter/Express.js/MySQL',
     title: 'NPay',
-    preview: '',
+    preview:
+      'NPay is a next generation mobile payment system, that is meant to easen payments and give users insightful analytics on their money, it also has feautures for planning, schedule Pay amd more',
     slug: 'npay',
+    external_url: 'https://npay.nullchemy.com',
   },
   {
     id: 4,
     imageUrl: NAnalytics,
     stack: 'React Native/Express.js/MySQL',
     title: 'N-Analytics',
-    preview: '',
+    preview:
+      'this app is designed for business analytics, supply chain and business management',
     slug: 'n-analytics',
+    external_url: 'https://analytics.nullchemy.com',
   },
   {
     id: 5,
     imageUrl: Nems,
     stack: 'React.js/Express.js/MySQL',
     title: 'Null-EMS',
-    preview: '',
+    preview: 'Null-EMS is an HR system to manage people in an organization',
     slug: 'null-ems',
+    external_url: 'https://nems.nullchemy.com',
   },
   {
     id: 6,
@@ -68,6 +79,7 @@ const slides: Slide[] = [
     preview:
       "I made an app that helps people easily tell the police about crimes and show proof in real time. This app keeps everyone safe and solves problems like distance and not having records. Let's build a safer community together using this technology!",
     slug: 'wenotify-kenya',
+    external_url: 'https://wenotify.nullchemy.com',
   },
 ]
 
@@ -136,12 +148,29 @@ const ProjectsSlider: React.FC = () => {
                     <p className="projects_slide_item_par">
                       {slides[activeSlideIndex].preview}
                     </p>
-                    <Link
-                      to={'/' + slides[activeSlideIndex].slug}
-                      className="pl_pr_learn_more c_p"
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '20px',
+                      }}
                     >
-                      <span>learn more</span>
-                    </Link>
+                      <Link
+                        to={'/' + slides[activeSlideIndex].slug}
+                        className="pl_pr_learn_more c_p"
+                      >
+                        <span>learn more</span>
+                      </Link>
+                      <a
+                        href={slides[activeSlideIndex].external_url}
+                        target="__blank"
+                        rel="noreferer"
+                      >
+                        <ExternalLink
+                          style={{ height: '20px', width: '20px' }}
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
