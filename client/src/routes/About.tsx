@@ -49,7 +49,7 @@ const About = () => {
             </div>
             <div className="abt_right">
               <div className="abt_background">
-                <h2 className="abt_b_title">
+                <h2 className="abt_b_title font-bold text-2xl">
                   {' '}
                   &nbsp;&nbsp;{' '}
                   <span style={{ paddingRight: '15px' }}>Background</span>{' '}
@@ -71,7 +71,7 @@ const About = () => {
                 </p>
               </div>
               <div className="abt_tech_stack">
-                <h2 className="abt_stack_title">
+                <h2 className="abt_stack_title font-bold text-2xl">
                   <span className="sCounter">02.</span> &nbsp;&nbsp;&nbsp;&nbsp;
                   Technologies I use
                 </h2>
@@ -108,7 +108,7 @@ const About = () => {
             </div>
           </div>
           <div className="abt_exp">
-            <h2 className="abt_exp_title">
+            <h2 className="abt_exp_title font-bold text-2xl">
               <span className="eCounter">03.</span>Career
             </h2>
             <div className="abt_career flex f_row">
@@ -171,13 +171,13 @@ const About = () => {
             </div>
           </div>
           <div className="eTexts">
-            <h2 className="eTitle">
-              <span className="eCounter">04. </span> &nbsp;&nbsp;&nbsp;&nbsp;
-              Experience & Schooling
+            <h2 className="eTitle font-bold text-2xl">
+              <span className="eCounter -mb-1 mr-1">04. </span>{' '}
+              &nbsp;&nbsp;&nbsp;&nbsp; Experience & Schooling
             </h2>
             <div className="experiences">
               <div className="exp">
-                <h2 className="eOneTitle">
+                <h2 className="eOneTitle font-bold text-2xl">
                   Samoei Boys Secondary School, Nandi Hills
                 </h2>
                 <div className="eOneTexts">
@@ -190,7 +190,7 @@ const About = () => {
                 </div>
               </div>
               <div className="exp">
-                <h2 className="eOneTitle">
+                <h2 className="eOneTitle font-bold text-2xl">
                   Alphax College (Web Development), Eldoret
                 </h2>
                 <div className="eOneTexts">
@@ -203,7 +203,7 @@ const About = () => {
                 </div>
               </div>
               <div className="exp">
-                <h2 className="eOneTitle">
+                <h2 className="eOneTitle font-bold text-2xl">
                   Machakos University (Computer Science), Machakos
                 </h2>
                 <div className="eOneTexts">
@@ -220,7 +220,7 @@ const About = () => {
                 </div>
               </div>
               <div className="exp">
-                <h2 className="eOneTitle">
+                <h2 className="eOneTitle font-bold text-2xl">
                   Water Resources Authority (Attaché), Nairobi
                 </h2>
                 <div className="eOneTexts">
@@ -234,7 +234,7 @@ const About = () => {
                 </div>
               </div>
               <div className="exp">
-                <h2 className="eOneTitle">
+                <h2 className="eOneTitle font-bold text-2xl">
                   Moringa School (Software Engineering), Nairobi
                 </h2>
                 <div className="eOneTexts">
