@@ -2,9 +2,9 @@ import axios, { AxiosResponse } from 'axios'
 
 const backend = (): string => {
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-    return 'https://server.nullchemy.com/'
+    return 'https://nullchemy-api.onrender.com/'
   } else {
-    return 'https://server.nullchemy.com/'
+    return 'https://nullchemy-api.onrender.com/'
   }
 }
 

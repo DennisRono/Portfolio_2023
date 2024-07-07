@@ -198,7 +198,7 @@ const ProjectsSlider: React.FC = () => {
             to="/all-projects"
             className="py-2 px-4 border border-slate-600 rounded-md"
           >
-            All Projetcs List
+            All Projects List
           </Link>
         </div>
       </div>
